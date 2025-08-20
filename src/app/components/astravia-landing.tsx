@@ -60,6 +60,7 @@ export default function AstraviaLanding() {
       <div className="fixed w-full h-screen">
         <iframe
           src="https://my.spline.design/hellodistortingintro-KK1UjacLdIpYX67NFsvuRTYC/"
+          // src="https://my.spline.design/liquidring-PGc8zQXZyDUpVFvWNgohNZnv"
           frameBorder="0"
           width="100%"
           height="100%"
@@ -728,7 +729,7 @@ export default function AstraviaLanding() {
 
       {/* CTA Section */}
       <section
-        className="py-20 bg-gradient-to-r from-neutral-900/50 to-neutral-800/30 border-y border-neutral-800/50 backdrop-grayscale-70"
+        className="py-20 bg-gradient-to-r from-neutral-900/50 to-neutral-800/30 border-y border-neutral-800/50 backdrop-grayscale-100"
         style={{
           opacity: 0,
           animation: "0.8s ease-out 0.2s 1 normal forwards running fadeSlideUp",
