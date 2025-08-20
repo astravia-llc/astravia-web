@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,15 +12,106 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Font family classes */
+.font-geist {
+  font-family: "Geist", sans-serif !important;
+}
+.font-roboto {
+  font-family: "Roboto", sans-serif !important;
+}
+.font-montserrat {
+  font-family: "Montserrat", sans-serif !important;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+.font-playfair {
+  font-family: "Playfair Display", serif !important;
+}
+.font-instrument-serif {
+  font-family: "Instrument Serif", serif !important;
+}
+.font-merriweather {
+  font-family: "Merriweather", serif !important;
+}
+.font-bricolage {
+  font-family: "Bricolage Grotesque", sans-serif !important;
+}
+.font-jakarta {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+.font-manrope {
+  font-family: "Manrope", sans-serif !important;
+}
+.font-space-grotesk {
+  font-family: "Space Grotesk", sans-serif !important;
+}
+.font-work-sans {
+  font-family: "Work Sans", sans-serif !important;
+}
+.font-pt-serif {
+  font-family: "PT Serif", serif !important;
+}
+.font-geist-mono {
+  font-family: "Geist Mono", monospace !important;
+}
+.font-space-mono {
+  font-family: "Space Mono", monospace !important;
+}
+.font-quicksand {
+  font-family: "Quicksand", sans-serif !important;
+}
+.font-nunito {
+  font-family: "Nunito", sans-serif !important;
+}
+
+/* Custom animations */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
