@@ -31,10 +31,6 @@ export default function RootLayout({
           src="https://cdn.tailwindcss.com"
           strategy="beforeInteractive"
         />
-        <Script
-          src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"
-          strategy="beforeInteractive"
-        />
 
         {/* Google Fonts */}
         <link
