@@ -1,5 +1,5 @@
-import NexusLanding from './components/NexusLanding';
+import AstraviaLanding from "./components/astravia-landing";
 
 export default function Home() {
-  return <NexusLanding />;
+  return <AstraviaLanding />;
 }
