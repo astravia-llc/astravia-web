@@ -2,10 +2,7 @@
 
 import { useEffect } from "react";
 import {
-  Cpu,
   Menu,
-  Sparkles,
-  PlayCircle,
   Zap,
   Shield,
   Target,
@@ -20,7 +17,10 @@ import {
   GlobeLock,
   Award,
   Key,
+  Send,
 } from "lucide-react";
+import Image from "next/image";
+import clsx from "clsx";
 
 export default function AstraviaLanding() {
   useEffect(() => {
@@ -57,6 +57,7 @@ export default function AstraviaLanding() {
       <div className="fixed w-full h-screen">
         <iframe
           src="https://my.spline.design/hellodistortingintro-KK1UjacLdIpYX67NFsvuRTYC/"
+          // src="https://my.spline.design/liquidring-PGc8zQXZyDUpVFvWNgohNZnv"
           frameBorder="0"
           width="100%"
           height="100%"
@@ -77,10 +78,16 @@ export default function AstraviaLanding() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <div
-                className="w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center from-indigo-500 to-indigo-600"
+                className="w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center from-transparent from-[10%] via-transparent via-[75%] to-orange-600 to-[95%]"
                 style={{ transition: "outline 0.1s ease-in-out" }}
               >
-                <Cpu className="w-4 h-4 text-white stroke-2" />
+                <Image
+                  src="/images/logo.png"
+                  alt="Astravia Logo"
+                  width={100}
+                  height={100}
+                  className="size-10 text-white stroke-2"
+                />
               </div>
               <span
                 className="text-lg tracking-tight font-geist font-normal"
@@ -120,7 +127,7 @@ export default function AstraviaLanding() {
               </a>
             </div>
             <button className="md:hidden">
-              <Menu className="w-5 h-5" />
+              <Menu className="size-5" />
             </button>
           </div>
         </div>
@@ -130,21 +137,21 @@ export default function AstraviaLanding() {
         <div className="max-w-7xl sm:px-6 lg:px-8 md:pt-24 mr-auto ml-auto pt-16 pr-4 pb-8 pl-4">
           <div className="max-w-4xl text-center mr-auto ml-auto">
             <span
-              className="inline-flex items-center gap-2 uppercase tracking-widest text-xs font-medium mb-6"
+              className="inline-flex items-center gap-2 uppercase tracking-widest text-xs font-medium mb-6 border-neutral-700 px-6 py-2 border rounded-full bg-gradient-to-tr from-teal-300/10 via-blue-400/10 to-orange-300/10"
               style={{
                 opacity: 0,
                 animation: "fadeSlideUp 0.8s ease-out 0.4s forwards",
               }}
             >
               <span
-                className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-400 to-indigo-500"
+                className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-400 to-orange-500"
                 style={{ transition: "outline 0.1s ease-in-out" }}
               ></span>
               <span
                 className="text-neutral-400 font-geist font-normal"
                 style={{ transition: "outline 0.1s ease-in-out" }}
               >
-                Next-Generation AI Architecture
+                Next-Generation Software Architecture
               </span>
             </span>
 
@@ -156,10 +163,17 @@ export default function AstraviaLanding() {
                   "0.8s ease-out 0.6s 1 normal forwards running fadeSlideUp",
               }}
             >
-              Powered by
+              Integrate AI with
               <br className="hidden sm:block" />
-              <span className="bg-clip-text font-light text-transparent tracking-tight font-geist bg-gradient-to-tr from-teal-400 to-blue-500">
-                Astravia AI™
+              <span
+                className="bg-clip-text font-light text-transparent tracking-tight bg-gradient-to-tr from-white via-white to-orange-700 inline-block"
+                style={{
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Astravia
               </span>
             </h1>
 
@@ -183,20 +197,21 @@ export default function AstraviaLanding() {
                 animation: "fadeSlideUp 0.8s ease-out 1s forwards",
               }}
             >
-              <button
-                className="group inline-flex gap-2 transition-all duration-300 transform hover:scale-105 hover:from-indigo-600 hover:to-indigo-700 text-sm font-normal text-white font-geist bg-gradient-to-tr from-teal-400 to-blue-500 rounded-full pt-3 pr-6 pb-3 pl-6 items-center"
+              <a
+                href="#"
+                className="px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 text-sm  transition-all duration-300 font-geist font-normal"
                 style={{ transition: "outline 0.1s ease-in-out" }}
               >
-                <Sparkles className="w-4 h-4 stroke-2 group-hover:rotate-12 transition-transform" />
-                Experience Astravia AI Demo
-              </button>
-              <button
-                className="inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 text-sm px-6 py-3 transition-all duration-300 font-geist font-normal"
+                Watch Our Work
+              </a>
+              <a
+                href="#"
+                className="bg-neutral-700/50 px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-400/50 text-sm transition-all duration-300 font-geist font-normal"
                 style={{ transition: "outline 0.1s ease-in-out" }}
               >
-                <PlayCircle className="w-4 h-4 stroke-1.5" />
-                Watch Technical Overview
-              </button>
+                Let`&apos;`s Talk
+                <Send className="size-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -711,7 +726,7 @@ export default function AstraviaLanding() {
 
       {/* CTA Section */}
       <section
-        className="py-20 bg-gradient-to-r from-neutral-900/50 to-neutral-800/30 border-y border-neutral-800/50"
+        className="py-20 bg-gradient-to-r from-neutral-900/50 to-neutral-800/30 border-y border-neutral-800/50 backdrop-grayscale-100"
         style={{
           opacity: 0,
           animation: "0.8s ease-out 0.2s 1 normal forwards running fadeSlideUp",
@@ -731,14 +746,18 @@ export default function AstraviaLanding() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r text-white px-8 py-4 transition-all duration-300 transform hover:scale-105 font-geist font-normal from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700"
+              className={clsx(
+                "hover:cursor-pointer group inline-flex items-center gap-2 rounded-full bg-gradient-to-r text-white px-8 py-4 transition-all duration-300 transform  font-geist font-normal",
+                "from-teal-500/20 to-orange-600/20 hover:from-teal-500/50 hover:to-orange-700/50",
+                "border border-neutral-700 hover:border-neutral-500 "
+              )}
               style={{ transition: "outline 0.1s ease-in-out" }}
             >
-              <Rocket className="w-5 h-5 stroke-2 group-hover:translate-x-1 transition-transform" />
+              <Rocket className="w-5 h-5 stroke-2" />
               Start Free Trial
             </button>
             <button
-              className="inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 px-8 py-4 transition-all duration-300 font-geist font-normal"
+              className="hover:cursor-pointer inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 px-8 py-4 transition-all duration-300 font-geist font-normal"
               style={{ transition: "outline 0.1s ease-in-out" }}
             >
               <Calendar className="w-5 h-5 stroke-1.5" />
