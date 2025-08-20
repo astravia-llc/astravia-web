@@ -2,10 +2,7 @@
 
 import { useEffect } from "react";
 import {
-  Cpu,
   Menu,
-  Sparkles,
-  PlayCircle,
   Zap,
   Shield,
   Target,
@@ -212,7 +209,7 @@ export default function AstraviaLanding() {
                 className="bg-neutral-700/50 px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-400/50 text-sm transition-all duration-300 font-geist font-normal"
                 style={{ transition: "outline 0.1s ease-in-out" }}
               >
-                Let's Talk
+                Let`&apos;`s Talk
                 <Send className="size-4" />
               </a>
             </div>
