@@ -27,11 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src="https://cdn.tailwindcss.com"
-          strategy="beforeInteractive"
-        />
-
         {/* Google Fonts */}
         <link
           rel="stylesheet"
