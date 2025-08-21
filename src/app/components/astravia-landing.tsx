@@ -83,20 +83,16 @@ export default function AstraviaLanding() {
                   // "from-transparent from-[10%] via-transparent via-[75%] to-orange-600 to-[95%]",
                   "hover:scale-105 transition-all duration-300"
                 )}
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 <Image
-                  src="/images/logo.png"
+                  src="/astravia-logo.png"
                   alt="Astravia Logo"
                   width={100}
                   height={100}
                   className="size-10 text-white stroke-2"
                 />
               </div>
-              <span
-                className="text-lg tracking-tight font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <span className="text-lg tracking-tight font-geist font-normal">
                 Astravia
               </span>
             </div>
@@ -104,28 +100,24 @@ export default function AstraviaLanding() {
               <a
                 href="#"
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 Products
               </a>
               <a
                 href="#"
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 Solutions
               </a>
               <a
                 href="#"
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 Developers
               </a>
               <a
                 href="#"
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 Company
               </a>
@@ -147,14 +139,8 @@ export default function AstraviaLanding() {
                 animation: "fadeSlideUp 0.8s ease-out 0.4s forwards",
               }}
             >
-              <span
-                className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-400 to-orange-500"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              ></span>
-              <span
-                className="text-neutral-400 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-400 to-orange-500"></span>
+              <span className="text-neutral-400 font-geist font-normal">
                 Next-Generation Software Architecture
               </span>
             </span>
@@ -204,16 +190,14 @@ export default function AstraviaLanding() {
               <a
                 href="#"
                 className="px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 text-sm  transition-all duration-300 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 Watch Our Work
               </a>
               <a
                 href="#"
                 className="bg-neutral-700/50 px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-400/50 text-sm transition-all duration-300 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
-                Let`&apos;`s Talk
+                Let&apos;s Talk
                 <Send className="size-4" />
               </a>
             </div>
@@ -222,14 +206,8 @@ export default function AstraviaLanding() {
 
         {/* Animated background */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div
-            className="absolute -top-40 -right-32 w-96 h-96 rounded-full blur-3xl bg-indigo-500/5"
-            style={{ transition: "outline 0.1s ease-in-out" }}
-          ></div>
-          <div
-            className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full blur-3xl bg-indigo-500/5"
-            style={{ transition: "outline 0.1s ease-in-out" }}
-          ></div>
+          <div className="absolute -top-40 -right-32 w-96 h-96 rounded-full blur-3xl bg-indigo-500/5"></div>
+          <div className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full blur-3xl bg-indigo-500/5"></div>
         </div>
       </header>
 
@@ -248,10 +226,7 @@ export default function AstraviaLanding() {
               <div className="text-2xl md:text-3xl mb-2 font-light tracking-tight font-geist text-cyan-400">
                 99.7%
               </div>
-              <div
-                className="text-sm text-neutral-400 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <div className="text-sm text-neutral-400 font-geist font-normal">
                 Accuracy Rate
               </div>
             </div>
@@ -259,10 +234,7 @@ export default function AstraviaLanding() {
               <div className="text-2xl md:text-3xl mb-2 font-light tracking-tight font-geist text-cyan-400">
                 2.3s
               </div>
-              <div
-                className="text-sm text-neutral-400 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <div className="text-sm text-neutral-400 font-geist font-normal">
                 Avg Response Time
               </div>
             </div>
@@ -270,10 +242,7 @@ export default function AstraviaLanding() {
               <div className="text-2xl md:text-3xl mb-2 font-light tracking-tight font-geist text-cyan-400">
                 150M+
               </div>
-              <div
-                className="text-sm text-neutral-400 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <div className="text-sm text-neutral-400 font-geist font-normal">
                 Conversations Processed
               </div>
             </div>
@@ -281,10 +250,7 @@ export default function AstraviaLanding() {
               <div className="text-2xl md:text-3xl mb-2 font-light tracking-tight font-geist text-cyan-400">
                 24/7
               </div>
-              <div
-                className="text-sm text-neutral-400 font-geist font-normal"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <div className="text-sm text-neutral-400 font-geist font-normal">
                 Uptime Guarantee
               </div>
             </div>
@@ -305,10 +271,7 @@ export default function AstraviaLanding() {
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <span
-                    className="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-geist font-normal bg-indigo-500/10 text-cyan-400"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-geist font-normal bg-indigo-500/10 text-cyan-400">
                     03
                   </span>
                 </div>
@@ -316,10 +279,7 @@ export default function AstraviaLanding() {
                   <h2 className="text-2xl text-neutral-100 mb-4 font-light tracking-tight font-geist">
                     Advanced AI Architecture
                   </h2>
-                  <p
-                    className="text-neutral-400 leading-relaxed font-geist font-normal"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
+                  <p className="text-neutral-400 leading-relaxed font-geist font-normal">
                     The Astravia AI™ features a proprietary AI architecture
                     specifically engineered for customer service excellence.
                     Every neural layer is meticulously optimized for precision,
@@ -332,38 +292,20 @@ export default function AstraviaLanding() {
 
               <div className="space-y-4 pl-12">
                 <div className="flex items-center gap-3">
-                  <Zap
-                    className="w-4 h-4 stroke-2 text-cyan-400"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  />
-                  <span
-                    className="text-sm text-neutral-300 font-geist font-normal"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
+                  <Zap className="w-4 h-4 stroke-2 text-cyan-400" />
+                  <span className="text-sm text-neutral-300 font-geist font-normal">
                     Lightning-fast inference optimization
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Shield
-                    className="w-4 h-4 stroke-2 text-cyan-400"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  />
-                  <span
-                    className="text-sm text-neutral-300 font-geist font-normal"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
+                  <Shield className="w-4 h-4 stroke-2 text-cyan-400" />
+                  <span className="text-sm text-neutral-300 font-geist font-normal">
                     Enterprise-grade security protocols
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Target
-                    className="w-4 h-4 stroke-2 text-cyan-400"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  />
-                  <span
-                    className="text-sm text-neutral-300 font-geist font-normal"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
+                  <Target className="w-4 h-4 stroke-2 text-cyan-400" />
+                  <span className="text-sm text-neutral-300 font-geist font-normal">
                     Context-aware response generation
                   </span>
                 </div>
@@ -378,10 +320,7 @@ export default function AstraviaLanding() {
                 animation: "fadeSlideLeft 0.8s ease-out 0.4s forwards",
               }}
             >
-              <div
-                className="relative bg-gradient-to-br from-neutral-900/80 to-neutral-900/40 border border-neutral-800/50 rounded-2xl overflow-hidden p-6 md:p-12"
-                style={{ transition: "outline 0.1s ease-in-out" }}
-              >
+              <div className="relative bg-gradient-to-br from-neutral-900/80 to-neutral-900/40 border border-neutral-800/50 rounded-2xl overflow-hidden p-6 md:p-12">
                 {/* Grid background */}
                 <div className="absolute inset-0 pointer-events-none opacity-30">
                   <svg
@@ -408,7 +347,6 @@ export default function AstraviaLanding() {
                       height="100%"
                       fill="url(#grid)"
                       className="text-neutral-700"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
                     ></rect>
                   </svg>
                 </div>
@@ -420,16 +358,10 @@ export default function AstraviaLanding() {
                     <div className="w-full max-w-md">
                       <div className="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-500/30 rounded-xl p-6 text-center">
                         <MessageCircle className="w-8 h-8 text-blue-400 mx-auto mb-3 stroke-1.5" />
-                        <div
-                          className="text-sm text-blue-400 font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-sm text-blue-400 font-geist font-normal">
                           Customer Query Input
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 mt-1 font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 mt-1 font-geist font-normal">
                           Natural language processing
                         </div>
                       </div>
@@ -437,45 +369,21 @@ export default function AstraviaLanding() {
 
                     {/* Processing Layers */}
                     <div className="w-full grid md:grid-cols-2 gap-6 max-w-4xl">
-                      <div
-                        className="bg-gradient-to-r border rounded-xl p-6 from-indigo-500/20 to-indigo-600/20 border-indigo-500/30"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      >
-                        <Brain
-                          className="w-8 h-8 mb-3 stroke-1.5 text-indigo-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        />
-                        <div
-                          className="text-sm mb-2 font-geist font-normal text-indigo-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                      <div className="bg-gradient-to-r border rounded-xl p-6 from-indigo-500/20 to-indigo-600/20 border-indigo-500/30">
+                        <Brain className="w-8 h-8 mb-3 stroke-1.5 text-indigo-400" />
+                        <div className="text-sm mb-2 font-geist font-normal text-indigo-400">
                           Neural Processing Core
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 font-geist font-normal">
                           Advanced transformer architecture
                         </div>
                       </div>
-                      <div
-                        className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-xl p-6"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      >
-                        <Database
-                          className="w-8 h-8 text-green-400 mb-3 stroke-1.5"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        />
-                        <div
-                          className="text-sm text-green-400 mb-2 font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                      <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-xl p-6">
+                        <Database className="w-8 h-8 text-green-400 mb-3 stroke-1.5" />
+                        <div className="text-sm text-green-400 mb-2 font-geist font-normal">
                           Knowledge Retrieval
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 font-geist font-normal">
                           RAG-enhanced information access
                         </div>
                       </div>
@@ -483,24 +391,12 @@ export default function AstraviaLanding() {
 
                     {/* Output Layer */}
                     <div className="w-full max-w-md">
-                      <div
-                        className="bg-gradient-to-r border rounded-xl p-6 text-center from-indigo-500/20 to-indigo-600/20 border-indigo-500/30"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      >
-                        <CheckCircle
-                          className="w-8 h-8 mx-auto mb-3 stroke-1.5 text-indigo-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        />
-                        <div
-                          className="text-sm font-geist font-normal text-indigo-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                      <div className="bg-gradient-to-r border rounded-xl p-6 text-center from-indigo-500/20 to-indigo-600/20 border-indigo-500/30">
+                        <CheckCircle className="w-8 h-8 mx-auto mb-3 stroke-1.5 text-indigo-400" />
+                        <div className="text-sm font-geist font-normal text-indigo-400">
                           Validated Response
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 mt-1 font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 mt-1 font-geist font-normal">
                           Quality-assured output
                         </div>
                       </div>
@@ -549,54 +445,27 @@ export default function AstraviaLanding() {
 
                 {/* Technical Specifications */}
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div
-                    className="text-center p-4 rounded-lg bg-neutral-800/30"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
-                    <div
-                      className="text-lg mb-1 font-geist font-normal text-cyan-400"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
+                  <div className="text-center p-4 rounded-lg bg-neutral-800/30">
+                    <div className="text-lg mb-1 font-geist font-normal text-cyan-400">
                       4.2B
                     </div>
-                    <div
-                      className="text-xs text-neutral-400 font-geist font-normal"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
+                    <div className="text-xs text-neutral-400 font-geist font-normal">
                       Parameters
                     </div>
                   </div>
-                  <div
-                    className="text-center p-4 rounded-lg bg-neutral-800/30"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
-                    <div
-                      className="text-lg mb-1 font-geist font-normal text-cyan-400"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
+                  <div className="text-center p-4 rounded-lg bg-neutral-800/30">
+                    <div className="text-lg mb-1 font-geist font-normal text-cyan-400">
                       128K
                     </div>
-                    <div
-                      className="text-xs text-neutral-400 font-geist font-normal"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
+                    <div className="text-xs text-neutral-400 font-geist font-normal">
                       Context Window
                     </div>
                   </div>
-                  <div
-                    className="text-center p-4 rounded-lg bg-neutral-800/30"
-                    style={{ transition: "outline 0.1s ease-in-out" }}
-                  >
-                    <div
-                      className="text-lg mb-1 font-geist font-normal text-cyan-400"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
+                  <div className="text-center p-4 rounded-lg bg-neutral-800/30">
+                    <div className="text-lg mb-1 font-geist font-normal text-cyan-400">
                       99.97%
                     </div>
-                    <div
-                      className="text-xs text-neutral-400 font-geist font-normal"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
+                    <div className="text-xs text-neutral-400 font-geist font-normal">
                       Uptime SLA
                     </div>
                   </div>
@@ -613,49 +482,25 @@ export default function AstraviaLanding() {
                   }}
                 >
                   <div className="space-y-8">
-                    <div
-                      className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      ></span>
+                    <div className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm">
+                      <span className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"></span>
                       <div>
-                        <div
-                          className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400">
                           [3.A.1] Query Refinement
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 leading-relaxed font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 leading-relaxed font-geist font-normal">
                           Advanced preprocessing optimizes input comprehension
                           and context extraction.
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      ></span>
+                    <div className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm">
+                      <span className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"></span>
                       <div>
-                        <div
-                          className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400">
                           [3.A.3] Response Validation
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 leading-relaxed font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 leading-relaxed font-geist font-normal">
                           Multi-layer validation ensures accuracy and safety
                           compliance.
                         </div>
@@ -672,49 +517,25 @@ export default function AstraviaLanding() {
                   }}
                 >
                   <div className="space-y-8">
-                    <div
-                      className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      ></span>
+                    <div className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm">
+                      <span className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"></span>
                       <div>
-                        <div
-                          className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400">
                           [3.A.2] Intelligent Generation
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 leading-relaxed font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 leading-relaxed font-geist font-normal">
                           Proprietary RAG architecture delivers contextually
                           precise responses.
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm"
-                      style={{ transition: "outline 0.1s ease-in-out" }}
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"
-                        style={{ transition: "outline 0.1s ease-in-out" }}
-                      ></span>
+                    <div className="flex items-start gap-3 p-4 bg-neutral-900/80 rounded-lg border border-neutral-800/50 backdrop-blur-sm">
+                      <span className="w-2 h-2 rounded-full mt-2 flex-shrink-0 bg-indigo-500"></span>
                       <div>
-                        <div
-                          className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs uppercase tracking-wide mb-1 font-geist font-normal text-cyan-400">
                           [3.A.4] Continuous Optimization
                         </div>
-                        <div
-                          className="text-xs text-neutral-400 leading-relaxed font-geist font-normal"
-                          style={{ transition: "outline 0.1s ease-in-out" }}
-                        >
+                        <div className="text-xs text-neutral-400 leading-relaxed font-geist font-normal">
                           Real-time learning improves efficiency and knowledge
                           coverage.
                         </div>
@@ -741,10 +562,7 @@ export default function AstraviaLanding() {
           <h3 className="text-3xl md:text-4xl text-neutral-100 mb-6 font-light tracking-tight font-geist">
             Ready to experience the future?
           </h3>
-          <p
-            className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto font-geist font-normal"
-            style={{ transition: "outline 0.1s ease-in-out" }}
-          >
+          <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto font-geist font-normal">
             Join thousands of enterprises leveraging Astravia AI for superior
             customer experiences.
           </p>
@@ -755,15 +573,11 @@ export default function AstraviaLanding() {
                 "from-teal-500/20 to-orange-600/20 hover:from-teal-500/50 hover:to-orange-700/50",
                 "border border-neutral-700 hover:border-neutral-500 "
               )}
-              style={{ transition: "outline 0.1s ease-in-out" }}
             >
               <Rocket className="w-5 h-5 stroke-2" />
               Start Free Trial
             </button>
-            <button
-              className="hover:cursor-pointer inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 px-8 py-4 transition-all duration-300 font-geist font-normal"
-              style={{ transition: "outline 0.1s ease-in-out" }}
-            >
+            <button className="hover:cursor-pointer inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 px-8 py-4 transition-all duration-300 font-geist font-normal">
               <Calendar className="w-5 h-5 stroke-1.5" />
               Schedule Demo
             </button>
@@ -781,10 +595,7 @@ export default function AstraviaLanding() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3
-              className="text-sm text-neutral-400 uppercase tracking-widest mb-2 font-geist font-normal"
-              style={{ transition: "outline 0.1s ease-in-out" }}
-            >
+            <h3 className="text-sm text-neutral-400 uppercase tracking-widest mb-2 font-geist font-normal transition-all duration-300">
               Enterprise Security & Compliance
             </h3>
             <p className="text-2xl text-neutral-200 font-light tracking-tight font-geist">
@@ -797,7 +608,6 @@ export default function AstraviaLanding() {
               <div
                 key={i}
                 className="group w-16 h-16 rounded-xl bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 <Icon className="w-7 h-7 text-neutral-600 group-hover:text-neutral-400 stroke-1.5 transition-colors" />
               </div>
@@ -812,16 +622,10 @@ export default function AstraviaLanding() {
               { title: "HIPAA", subtitle: "Healthcare Ready" },
             ].map((cert, i) => (
               <div key={i}>
-                <div
-                  className="text-xs text-neutral-400 uppercase tracking-wide font-geist font-normal"
-                  style={{ transition: "outline 0.1s ease-in-out" }}
-                >
+                <div className="text-xs text-neutral-400 uppercase tracking-wide font-geist font-normal">
                   {cert.title}
                 </div>
-                <div
-                  className="text-sm text-neutral-500 mt-1 font-geist font-normal"
-                  style={{ transition: "outline 0.1s ease-in-out" }}
-                >
+                <div className="text-sm text-neutral-500 mt-1 font-geist font-normal">
                   {cert.subtitle}
                 </div>
               </div>
