@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import {
   ArrowUpRight,
   Rocket,
@@ -5,56 +6,55 @@ import {
   Users,
   ClipboardList,
 } from "lucide-react";
+import Image from "next/image";
 
 type ShowcaseItem = {
   name: string;
   tagline: string;
   kind: "Product" | "Client Project";
-  description: string;
-  highlights: string[];
   icon: "rocket" | "utensils" | "users" | "clipboard";
   gradient: string; // tailwind gradient for badge/art
-  cta?: { label: string; href: string }[];
+  imageSrc?: string; // optional public asset
+  href?: string;
 };
 
 const ITEMS: ShowcaseItem[] = [
   {
     name: "Calorichat",
-    tagline: "AI nutrition coach",
+    tagline: "AI Calorie Tracker and Nutrition Coach",
     kind: "Product",
-    description:
-      "SaaS to track calories and generate adaptable nutritional plans powered by AI.",
-    highlights: ["RAG meal knowledge", "Adaptive macros", "Progress coaching"],
     icon: "utensils",
     gradient: "from-teal-500 to-orange-600",
-    cta: [
-      { label: "Visit", href: "#" },
-      { label: "Case Study", href: "#" },
-    ],
+    imageSrc: "/astravia-logo-warm.png", // placeholder until real artwork
+    href: "https://calorichat.com",
   },
   {
     name: "Plan Perfect",
-    tagline: "Non‑profit plan manager",
+    tagline: "Non‑profit Organization Plan Manager",
     kind: "Client Project",
-    description:
-      "Programs and plan management platform designed for non-profit organizations.",
-    highlights: ["Multi-tenant", "Secure workflows", "Impact reporting"],
     icon: "clipboard",
     gradient: "from-indigo-500 to-cyan-500",
-    cta: [{ label: "Overview", href: "#" }],
+    imageSrc: "/astravia-logo.png", // placeholder until client imagery is added
+    href: "#",
   },
 ];
 
-function IconFor({ type }: { type: ShowcaseItem["icon"] }) {
+function IconFor({
+  type,
+  className,
+}: {
+  type: ShowcaseItem["icon"];
+  className?: string;
+}) {
   switch (type) {
     case "rocket":
-      return <Rocket className="w-5 h-5" />;
+      return <Rocket className={clsx("size-4", className)} />;
     case "utensils":
-      return <Utensils className="w-5 h-5" />;
+      return <Utensils className={clsx("size-4", className)} />;
     case "users":
-      return <Users className="w-5 h-5" />;
+      return <Users className={clsx("size-4", className)} />;
     default:
-      return <ClipboardList className="w-5 h-5" />;
+      return <ClipboardList className={clsx("size-4", className)} />;
   }
 }
 
@@ -73,72 +73,65 @@ export function ProductsSection() {
             Products & Projects
           </span>
           <h2 className="text-3xl md:text-4xl text-neutral-100 font-light tracking-tight font-geist">
-            What we build
+            Recent Work
           </h2>
           <p className="text-neutral-400 mt-4 max-w-2xl mx-auto font-geist font-normal">
-            In‑house products and selected client work delivered with Astravia
-            quality.
+            Focused, elegant software. A glimpse of our recent work.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8 justify-items-center">
           {ITEMS.map((item) => (
             <article
               key={item.name}
-              className="group relative bg-gradient-to-br from-neutral-900/80 to-neutral-900/40 border border-neutral-800/50 hover:border-neutral-700 rounded-2xl p-6 transition-all duration-300 hover:scale-[1.01] overflow-hidden"
+              className="group relative w-full max-w-xl bg-gradient-to-br from-neutral-900/90 to-neutral-900/40 border border-neutral-800/50 hover:border-neutral-700 rounded-2xl p-0 transition-all duration-300 overflow-hidden"
             >
               {/* Accent glow */}
               <div
                 className={`pointer-events-none absolute -top-20 -right-20 w-60 h-60 rounded-full blur-3xl opacity-[0.12] bg-gradient-to-br ${item.gradient}`}
               />
 
-              <div className="flex items-center gap-3">
-                <div
-                  className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.gradient} flex items-center justify-center text-white`}
-                >
-                  <IconFor type={item.icon} />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-xs uppercase tracking-wide text-neutral-400 font-geist">
-                    {item.kind}
+              {/* Media */}
+              <a href={item.href} className="block">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900">
+                  {/* If we had real images, render them; otherwise gradient art */}
+                  {item.imageSrc ? (
+                    <Image
+                      src={item.imageSrc}
+                      alt={`${item.name} preview`}
+                      fill
+                      className="object-contain md:object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                    />
+                  ) : (
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-20`}
+                    />
+                  )}
+
+                  {/* Hover overlay arrow */}
+                  <div className="absolute right-3 top-3 z-10 inline-flex items-center justify-center w-8 h-8 rounded-full bg-neutral-900/60 border border-neutral-800 text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ArrowUpRight className="w-4 h-4" />
                   </div>
-                  <h3 className="text-lg text-neutral-100 font-geist font-normal tracking-tight truncate">
-                    {item.name}
-                  </h3>
                 </div>
-                <span className="ml-auto text-neutral-500 group-hover:text-neutral-300 transition-colors">
-                  <ArrowUpRight className="w-5 h-5" />
-                </span>
-              </div>
+              </a>
 
-              <p className="text-neutral-400 text-sm mt-4 font-geist font-normal">
-                {item.description}
-              </p>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {item.highlights.map((h) => (
+              {/* Meta */}
+              <div className="text-center p-4">
+                <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide text-neutral-400 font-geist">
                   <span
-                    key={h}
-                    className="px-2 py-1 rounded-full border border-neutral-700 text-xs text-neutral-400 font-geist"
+                    className={`inline-flex size-6 items-center justify-center rounded-md bg-gradient-to-br ${item.gradient} text-white`}
                   >
-                    {h}
+                    <IconFor type={item.icon} className="size-4" />
                   </span>
-                ))}
-              </div>
-
-              {item.cta && (
-                <div className="mt-6 flex items-center gap-3">
-                  {item.cta.map((c) => (
-                    <a
-                      key={c.label}
-                      href={c.href}
-                      className="text-sm text-neutral-300 hover:text-white px-3 py-1.5 rounded-full border border-neutral-700 hover:border-neutral-600 transition-colors font-geist"
-                    >
-                      {c.label}
-                    </a>
-                  ))}
+                  {item.kind}
                 </div>
-              )}
+                <h3 className="mt-2 text-lg md:text-xl text-neutral-100 font-geist font-normal tracking-tight">
+                  {item.name}
+                </h3>
+                <p className="text-neutral-400 text-sm mt-1 font-geist">
+                  {item.tagline}
+                </p>
+              </div>
             </article>
           ))}
         </div>

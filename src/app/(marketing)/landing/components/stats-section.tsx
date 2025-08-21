@@ -11,10 +11,10 @@ export function StatsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "99.7%", label: "Accuracy Rate" },
-            { value: "2.3s", label: "Avg Response Time" },
-            { value: "150M+", label: "Conversations Processed" },
-            { value: "24/7", label: "Uptime Guarantee" },
+            { value: "5+", label: "Years of Experience" },
+            { value: "4+", label: "Projects Delivered" },
+            { value: "100%", label: "Client Satisfaction" },
+            { value: "100%", label: "Adaptability" },
           ].map((item) => (
             <div className="text-center" key={item.label}>
               <div className="text-2xl md:text-3xl mb-2 font-light tracking-tight font-geist text-cyan-400">

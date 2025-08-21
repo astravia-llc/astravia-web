@@ -1,7 +1,7 @@
 "use client";
 
 import { Send } from "lucide-react";
-import clsx from "clsx";
+import Button from "../../../../components/ui/button";
 
 export function HeroHeader() {
   return (
@@ -63,19 +63,17 @@ export function HeroHeader() {
               animation: "fadeSlideUp 0.8s ease-out 1s forwards",
             }}
           >
-            <a
-              href="#"
-              className="px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 text-sm  transition-all duration-300 font-geist font-normal"
-            >
+            <Button variant="outline" size="md" href="#">
               Watch Our Work
-            </a>
-            <a
+            </Button>
+            <Button
+              variant="neutral"
+              size="md"
               href="#"
-              className="bg-neutral-700/50 px-6 py-3 inline-flex items-center gap-2 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-400/50 text-sm transition-all duration-300 font-geist font-normal"
+              rightIcon={<Send className="size-4" />}
             >
               Let&apos;s Talk
-              <Send className="size-4" />
-            </a>
+            </Button>
           </div>
         </div>
       </div>
