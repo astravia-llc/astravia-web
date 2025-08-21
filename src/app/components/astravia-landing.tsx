@@ -78,7 +78,11 @@ export default function AstraviaLanding() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <div
-                className="w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center from-transparent from-[10%] via-transparent via-[75%] to-orange-600 to-[95%]"
+                className={clsx(
+                  "w-8 h-8 rounded-lg bg-gradient-to-br flex items-center justify-center",
+                  // "from-transparent from-[10%] via-transparent via-[75%] to-orange-600 to-[95%]",
+                  "hover:scale-105 transition-all duration-300"
+                )}
                 style={{ transition: "outline 0.1s ease-in-out" }}
               >
                 <Image
