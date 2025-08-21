@@ -1,6 +1,6 @@
 import { ShieldCheck, FileLock, GlobeLock, Award, Key } from "lucide-react";
 
-export function TrustCertifications() {
+export function OurServices() {
   return (
     <section
       className="py-20"
@@ -12,10 +12,10 @@ export function TrustCertifications() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h3 className="text-sm text-neutral-400 uppercase tracking-widest mb-2 font-geist font-normal transition-all duration-300">
-            Enterprise Security & Compliance
+            Our Services
           </h3>
           <p className="text-2xl text-neutral-200 font-light tracking-tight font-geist">
-            Trusted by Fortune 500 companies worldwide
+            We offer a range of services to help you achieve your goals.
           </p>
         </div>
 
@@ -32,10 +32,20 @@ export function TrustCertifications() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center">
           {[
-            { title: "SOC 2 Type II", subtitle: "Security Certified" },
-            { title: "GDPR", subtitle: "Privacy Compliant" },
-            { title: "ISO 27001", subtitle: "Information Security" },
-            { title: "HIPAA", subtitle: "Healthcare Ready" },
+            {
+              title: "Software Development",
+              subtitle:
+                "We build software for the long term. We are not here to build a quick fix.",
+            },
+            {
+              title: "AI Integration",
+              subtitle:
+                "We integrate AI into your legacy software to improve efficiency and accuracy",
+            },
+            {
+              title: "Consulting",
+              subtitle: "Get our experts advice",
+            },
           ].map((cert, i) => (
             <div key={i}>
               <div className="text-xs text-neutral-400 uppercase tracking-wide font-geist font-normal">
@@ -52,4 +62,4 @@ export function TrustCertifications() {
   );
 }
 
-export default TrustCertifications;
+export default OurServices;

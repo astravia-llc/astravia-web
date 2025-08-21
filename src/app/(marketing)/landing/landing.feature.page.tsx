@@ -6,7 +6,7 @@ import { ProductsSection } from "./components/products-section";
 import HeroHeader from "./components/hero-header";
 import StatsSection from "./components/stats-section";
 import CTASection from "./components/cta-section";
-import TrustCertifications from "./components/trust-certifications";
+import OurServices from "./components/our-services";
 
 export function LandingFeaturePage() {
   useEffect(() => {
@@ -52,7 +52,7 @@ export function LandingFeaturePage() {
       <StatsSection />
       <ProductsSection />
       <CTASection />
-      <TrustCertifications />
+      <OurServices />
     </>
   );
 }
