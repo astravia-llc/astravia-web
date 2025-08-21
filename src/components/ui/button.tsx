@@ -47,10 +47,7 @@ export type ButtonProps = AnchorButtonProps | NativeButtonProps;
 
 export function Button(props: ButtonProps) {
   const { variant, size } = props;
-  const classes = clsx(
-    buttonVariants({ variant, size }),
-    (props as any).className
-  );
+  const classes = clsx(buttonVariants({ variant, size }), props.className);
 
   if ("href" in props && props.href) {
     const { href, leftIcon, rightIcon, children, className, ...anchorProps } =
