@@ -1,4 +1,4 @@
-import { Rocket, Calendar } from "lucide-react";
+import { Mail } from "lucide-react";
 import Button from "../../../../components/ui/button";
 
 export function CTASection() {
@@ -23,16 +23,9 @@ export function CTASection() {
           <Button
             variant="gradient"
             size="lg"
-            leftIcon={<Rocket className="w-5 h-5 stroke-2" />}
+            leftIcon={<Mail className="w-5 h-5 stroke-2" />}
           >
-            Start Free Trial
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            leftIcon={<Calendar className="w-5 h-5 stroke-1.5" />}
-          >
-            Schedule Demo
+            Contact Us
           </Button>
         </div>
       </div>
