@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Astravia LLC — Advanced SaaS for Intelligent Customer Growth",
     description:
-      "Astravia creates powerful AI-first SaaS tools. Our flagship product, CaloriChat, redefines nutrition tracking with intelligent insights. Join us as we build the next 15 projects that shape the future of customer intelligence.",
-    url: "https://www.astravia.ai", // cámbialo cuando tengas dominio final
+      "Astravia builds AI-first SaaS products that empower businesses and individuals to grow smarter. Starting with CaloriChat, our intelligent calorie tracking and customer engagement tool.",
+    url: "https://www.astraviallc.com", // cámbialo cuando tengas dominio final
     siteName: "Astravia LLC",
     locale: "en_US",
     type: "website",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     description:
       "Astravia builds AI-first SaaS products that empower businesses and individuals to grow smarter. Starting with CaloriChat, our intelligent calorie tracking and customer engagement tool.",
     creator: "@astravia",
-    images: ["https://www.astravia.ai/og-image.png"],
+    images: ["https://www.astraviallc.com/og-image.png"],
   },
 };
 
