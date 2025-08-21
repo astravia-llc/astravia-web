@@ -1,5 +1,7 @@
-import AstraviaLanding from "./components/astravia-landing";
+export const dynamic = "force-static";
+
+import { LandingFeaturePage } from "./(marketing)/landing/landing.feature.page";
 
 export default function Home() {
-  return <AstraviaLanding />;
+  return <LandingFeaturePage />;
 }
