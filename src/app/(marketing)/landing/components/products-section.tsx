@@ -61,6 +61,7 @@ function IconFor({
 export function ProductsSection() {
   return (
     <section
+      id="products"
       className="py-20 md:py-28"
       style={{
         opacity: 0,

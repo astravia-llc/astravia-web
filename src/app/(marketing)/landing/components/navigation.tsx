@@ -37,10 +37,8 @@ export function Navigation() {
           </div>
           <div className="hidden md:flex items-center gap-8">
             {[
-              ["Products", "#"],
-              ["Solutions", "#"],
-              ["Developers", "#"],
-              ["Company", "#"],
+              ["Products", "#products"],
+              // ["Solutions", "#"],
             ].map(([label, href]) => (
               <a
                 key={label as string}
