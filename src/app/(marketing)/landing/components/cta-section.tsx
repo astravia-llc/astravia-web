@@ -13,7 +13,7 @@ export function CTASection() {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h3 className="text-3xl md:text-4xl text-neutral-100 mb-6 font-light tracking-tight font-geist">
-          Don't miss out on the future
+          Don&apos;t miss out on the future
         </h3>
         <p className="text-lg text-neutral-400 mb-10 max-w-2xl mx-auto font-geist font-normal">
           With our AI-powered solutions, you can stay ahead of the curve and
