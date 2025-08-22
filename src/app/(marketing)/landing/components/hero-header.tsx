@@ -17,7 +17,7 @@ export function HeroHeader() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-400 to-orange-500"></span>
             <span className="text-neutral-400 font-geist font-normal">
-              Next-Generation Software Architecture
+              Next-Generation Software Solutions
             </span>
           </span>
 
@@ -52,8 +52,8 @@ export function HeroHeader() {
               transition: "outline 0.1s ease-in-out",
             }}
           >
-            Revolutionary AI architecture designed for enterprise-grade customer
-            intelligence. Built for precision, optimized for scale.
+            Seamlessly merging AI and enterprise. A next-generation architecture
+            engineered for clarity, adaptability, and exponential scale.
           </p>
 
           <div
