@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +13,58 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Astravia - Advanced Customer Intelligence",
+  title: "Astravia LLC | Intelligent SaaS for Customer-Centric Growth",
   description:
-    "Revolutionary AI architecture designed for enterprise-grade customer intelligence. Built for precision, optimized for scale.",
+    "Astravia LLC builds AI-driven SaaS products designed to empower businesses with advanced customer intelligence. Our first product, CaloriChat, helps users track nutrition effortlessly while showcasing the future of data-driven wellness tools.",
+  keywords: [
+    "Astravia LLC",
+    "CaloriChat",
+    "AI SaaS",
+    "Customer Intelligence",
+    "Business Analytics",
+    "Nutrition AI",
+    "Customer Growth Tools",
+    "Startup SaaS",
+    "AI for Business",
+    "Software Development",
+    "AI Integration",
+    "Consulting",
+    "Support",
+    "Software Agency",
+    "Custom Software Development",
+    "Legacy Software Development",
+    "AI Integration",
+    "AI Consulting",
+    "AI Support",
+    "AI Training",
+    "AI Custom Software",
+    "AI Legacy Software",
+  ],
+  openGraph: {
+    title: "Astravia LLC — Advanced SaaS for Intelligent Customer Growth",
+    description:
+      "Astravia builds AI-first SaaS products that empower businesses and individuals to grow smarter. Starting with CaloriChat, our intelligent calorie tracking and customer engagement tool.",
+    url: "https://www.astraviallc.com", // cámbialo cuando tengas dominio final
+    siteName: "Astravia LLC",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/api/og", // llama a la ruta que genera la imagen
+        width: 1200,
+        height: 630,
+        alt: "Astravia LLC - Intelligent SaaS for Customer-Centric Growth",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Astravia LLC | AI-Powered SaaS for Customer-Centric Growth",
+    description:
+      "Astravia builds AI-first SaaS products that empower businesses and individuals to grow smarter. Starting with CaloriChat, our intelligent calorie tracking and customer engagement tool.",
+    creator: "@astravia",
+    images: ["https://www.astraviallc.com/og-image.png"],
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         {/* Google Fonts */}
         <link
