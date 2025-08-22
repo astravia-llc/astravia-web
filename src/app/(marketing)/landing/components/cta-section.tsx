@@ -24,6 +24,7 @@ export function CTASection() {
             variant="gradient"
             size="lg"
             leftIcon={<Mail className="w-5 h-5 stroke-2" />}
+            href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20a%20project"
           >
             Contact Us
           </Button>

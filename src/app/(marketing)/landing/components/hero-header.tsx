@@ -63,13 +63,13 @@ export function HeroHeader() {
               animation: "fadeSlideUp 0.8s ease-out 1s forwards",
             }}
           >
-            <Button variant="outline" size="md" href="#">
+            <Button variant="outline" size="md" href="#products">
               Watch Our Work
             </Button>
             <Button
               variant="neutral"
               size="md"
-              href="#"
+              href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20your%20project"
               rightIcon={<Send className="size-4" />}
             >
               Let&apos;s Talk

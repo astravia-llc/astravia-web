@@ -1,21 +1,15 @@
 import clsx from "clsx";
-import {
-  ArrowUpRight,
-  Rocket,
-  Utensils,
-  Users,
-  ClipboardList,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 type ShowcaseItem = {
   name: string;
   tagline: string;
   kind: "Product" | "Client Project";
-  icon: "rocket" | "utensils" | "users" | "clipboard";
   gradient: string; // tailwind gradient for badge/art
   imageSrc?: string; // optional public asset
   href?: string;
+  logoSrc?: string; // small logo for meta row
 };
 
 const ITEMS: ShowcaseItem[] = [
@@ -23,46 +17,27 @@ const ITEMS: ShowcaseItem[] = [
     name: "Calorichat",
     tagline: "AI Calorie Tracker and Nutrition Coach",
     kind: "Product",
-    icon: "utensils",
     gradient: "from-teal-500 to-orange-600",
-    imageSrc: "/astravia-logo-warm.png", // placeholder until real artwork
+    imageSrc: "/astravia-product-green.png", // placeholder until real artwork
+    logoSrc: "/logo-calorichat.png",
     href: "https://calorichat.com",
   },
   {
-    name: "Plan Perfect",
+    name: "PlanPerfect",
     tagline: "Non‑profit Organization Plan Manager",
     kind: "Client Project",
-    icon: "clipboard",
     gradient: "from-indigo-500 to-cyan-500",
-    imageSrc: "/astravia-logo.png", // placeholder until client imagery is added
-    href: "#",
+    imageSrc: "/astravia-product-mint.png", // placeholder until client imagery is added
+    logoSrc: "/logo-plan-perfect.png",
+    href: "https://www.planperfect.co/",
   },
 ];
-
-function IconFor({
-  type,
-  className,
-}: {
-  type: ShowcaseItem["icon"];
-  className?: string;
-}) {
-  switch (type) {
-    case "rocket":
-      return <Rocket className={clsx("size-4", className)} />;
-    case "utensils":
-      return <Utensils className={clsx("size-4", className)} />;
-    case "users":
-      return <Users className={clsx("size-4", className)} />;
-    default:
-      return <ClipboardList className={clsx("size-4", className)} />;
-  }
-}
 
 export function ProductsSection() {
   return (
     <section
       id="products"
-      className="py-20 md:py-28"
+      className="py-20 md:py-28 scroll-mt-20 md:scroll-mt-28"
       style={{
         opacity: 0,
         animation: "fadeSlideUp 0.8s ease-out 0.4s forwards",
@@ -70,7 +45,7 @@ export function ProductsSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <span className="inline-flex items-center gap-2 uppercase tracking-widest text-xs font-medium mb-4 border-neutral-700 px-4 py-1.5 border rounded-full bg-gradient-to-tr from-teal-300/10 via-blue-400/10 to-orange-300/10 text-neutral-400 font-geist">
+          <span className="backdrop-blur-lg  inline-flex items-center gap-2 uppercase tracking-widest text-xs font-medium mb-4 border-neutral-700 px-4 py-1.5 border rounded-full bg-gradient-to-tr from-teal-300/10 via-blue-400/10 to-orange-300/10 text-neutral-400 font-geist">
             Products & Projects
           </span>
           <h2 className="text-3xl md:text-4xl text-neutral-100 font-light tracking-tight font-geist">
@@ -93,7 +68,12 @@ export function ProductsSection() {
               />
 
               {/* Media */}
-              <a href={item.href} className="block">
+              <a
+                href={item.href}
+                className="block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900">
                   {/* If we had real images, render them; otherwise gradient art */}
                   {item.imageSrc ? (
@@ -117,13 +97,23 @@ export function ProductsSection() {
               </a>
 
               {/* Meta */}
-              <div className="text-center p-4">
+              <div className="text-center p-4 backdrop-blur-lg">
                 <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-wide text-neutral-400 font-geist">
-                  <span
-                    className={`inline-flex size-6 items-center justify-center rounded-md bg-gradient-to-br ${item.gradient} text-white`}
-                  >
-                    <IconFor type={item.icon} className="size-4" />
-                  </span>
+                  {item.logoSrc ? (
+                    <span className="inline-flex size-8 items-center justify-center rounded-md overflow-hidden bg-neutral-900/60 border border-neutral-800">
+                      <Image
+                        src={item.logoSrc}
+                        alt={`${item.name} logo`}
+                        width={16}
+                        height={16}
+                        className="size-5 object-contain"
+                      />
+                    </span>
+                  ) : (
+                    <span
+                      className={`inline-flex size-6 items-center justify-center rounded-md bg-gradient-to-br ${item.gradient} text-white`}
+                    />
+                  )}
                   {item.kind}
                 </div>
                 <h3 className="mt-2 text-lg md:text-xl text-neutral-100 font-geist font-normal tracking-tight">

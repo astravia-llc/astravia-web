@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300 font-geist font-normal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0",
+  "hover:cursor-pointer inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300 font-geist font-normal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0",
   {
     variants: {
       variant: {
@@ -50,10 +50,30 @@ export function Button(props: ButtonProps) {
   const classes = clsx(buttonVariants({ variant, size }), props.className);
 
   if ("href" in props && props.href) {
-    const { href, leftIcon, rightIcon, children, className, ...anchorProps } =
-      props as AnchorButtonProps;
+    const {
+      href,
+      leftIcon,
+      rightIcon,
+      children,
+      className,
+      onClick,
+      ...anchorProps
+    } = props as AnchorButtonProps;
+    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+      onClick?.(e);
+      if (e.defaultPrevented) return;
+      if (href.startsWith("#")) {
+        e.preventDefault();
+        const targetId = href.slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          history.replaceState(null, "", href);
+        }
+      }
+    };
     return (
-      <a href={href} className={classes} {...anchorProps}>
+      <a href={href} className={classes} onClick={handleClick} {...anchorProps}>
         {leftIcon ? <span className="shrink-0">{leftIcon}</span> : null}
         {children}
         {rightIcon ? <span className="shrink-0">{rightIcon}</span> : null}

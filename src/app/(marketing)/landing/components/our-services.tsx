@@ -30,12 +30,12 @@ export function OurServices() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12 text-center">
           {[
             {
               title: "Software Development",
               subtitle:
-                "We build software for the long term. We are not here to build a quick fix.",
+                "We build software for the long term. Scalable, maintainable, and future-proof.",
             },
             {
               title: "AI Integration",
@@ -44,7 +44,7 @@ export function OurServices() {
             },
             {
               title: "Consulting",
-              subtitle: "Get our experts advice",
+              subtitle: "Get our experts advice to improve your business.",
             },
           ].map((cert, i) => (
             <div key={i}>

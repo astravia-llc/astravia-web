@@ -5,6 +5,21 @@ import clsx from "clsx";
 import { Menu } from "lucide-react";
 
 export function Navigation() {
+  const handleNavClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.startsWith("#")) {
+      event.preventDefault();
+      const targetId = href.slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", href);
+      }
+    }
+  };
+
   return (
     <nav
       className="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-xl border-b border-neutral-800/50"
@@ -43,6 +58,7 @@ export function Navigation() {
               <a
                 key={label as string}
                 href={href as string}
+                onClick={(e) => handleNavClick(e, href as string)}
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal"
               >
                 {label}
