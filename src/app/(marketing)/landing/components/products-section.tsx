@@ -52,7 +52,8 @@ export function ProductsSection() {
             Recent Work
           </h2>
           <p className="text-neutral-400 mt-4 max-w-2xl mx-auto font-geist font-normal">
-            Focused, elegant software. A glimpse of our recent work.
+            Focused, elegant, and scalable software. A glimpse of our recent
+            work.
           </p>
         </div>
 

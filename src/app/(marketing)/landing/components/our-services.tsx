@@ -9,7 +9,7 @@ import {
 export function OurServices() {
   return (
     <section
-      className="py-20"
+      className="py-20 backdrop-grayscale-80"
       style={{
         opacity: 0,
         animation: "fadeSlideUp 0.8s ease-out 0.4s forwards",
@@ -32,13 +32,13 @@ export function OurServices() {
                 key={i}
                 className="group w-16 h-16 rounded-xl bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-lg"
               >
-                <Icon className="w-7 h-7 text-neutral-600 group-hover:text-neutral-400 stroke-1.5 transition-colors" />
+                <Icon className="w-7 h-7 text-neutral-500 group-hover:text-neutral-300 stroke-1.5 transition-colors" />
               </div>
             )
           )}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-center">
           {[
             {
               title: "Software Development",
@@ -56,10 +56,10 @@ export function OurServices() {
             },
           ].map((cert, i) => (
             <div key={i}>
-              <div className="text-xs text-neutral-400 uppercase tracking-wide font-geist font-normal">
+              <div className="text-xs text-neutral-300 uppercase tracking-wide font-geist font-normal">
                 {cert.title}
               </div>
-              <div className="text-sm text-neutral-500 mt-1 font-geist font-normal">
+              <div className="text-sm text-neutral-400 mt-1 font-geist font-normal">
                 {cert.subtitle}
               </div>
             </div>
