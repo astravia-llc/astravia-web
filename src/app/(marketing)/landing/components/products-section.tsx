@@ -18,7 +18,7 @@ const ITEMS: ShowcaseItem[] = [
     tagline: "AI Calorie Tracker and Nutrition Coach",
     kind: "Product",
     gradient: "from-teal-500 to-orange-600",
-    imageSrc: "/astravia-product-green.png", // placeholder until real artwork
+    imageSrc: "/calorichat-3d-render.png", // placeholder until real artwork
     logoSrc: "/logo-calorichat.png",
     href: "https://calorichat.com",
   },
@@ -27,7 +27,7 @@ const ITEMS: ShowcaseItem[] = [
     tagline: "Non‑profit Organization Plan Manager",
     kind: "Client Project",
     gradient: "from-indigo-500 to-cyan-500",
-    imageSrc: "/astravia-product-mint.png", // placeholder until client imagery is added
+    imageSrc: "/planperfect-3d-render.png", // placeholder until client imagery is added
     logoSrc: "/logo-plan-perfect.png",
     href: "https://www.planperfect.co/",
   },
@@ -75,7 +75,7 @@ export function ProductsSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900 grayscale-70 hover:grayscale-0 transition-all duration-300">
                   {/* If we had real images, render them; otherwise gradient art */}
                   {item.imageSrc ? (
                     <Image
