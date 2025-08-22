@@ -23,7 +23,7 @@ export function OurServices() {
           {[ShieldCheck, FileLock, GlobeLock, Award, Key].map((Icon, i) => (
             <div
               key={i}
-              className="group w-16 h-16 rounded-xl bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 flex items-center justify-center transition-all duration-300 hover:scale-110"
+              className="group w-16 h-16 rounded-xl bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-lg"
             >
               <Icon className="w-7 h-7 text-neutral-600 group-hover:text-neutral-400 stroke-1.5 transition-colors" />
             </div>
