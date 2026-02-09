@@ -1,37 +1,7 @@
-import clsx from "clsx";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-
-type ShowcaseItem = {
-  name: string;
-  tagline: string;
-  kind: "Product" | "Client Project";
-  gradient: string; // tailwind gradient for badge/art
-  imageSrc?: string; // optional public asset
-  href?: string;
-  logoSrc?: string; // small logo for meta row
-};
-
-const ITEMS: ShowcaseItem[] = [
-  {
-    name: "Calorichat",
-    tagline: "AI Calorie Tracker and Nutrition Coach",
-    kind: "Product",
-    gradient: "from-teal-500 to-orange-600",
-    imageSrc: "/calorichat-3d-render.png", // placeholder until real artwork
-    logoSrc: "/logo-calorichat.png",
-    href: "https://calorichat.com",
-  },
-  {
-    name: "PlanPerfect",
-    tagline: "Non‑profit Organization Plan Manager",
-    kind: "Client Project",
-    gradient: "from-indigo-500 to-cyan-500",
-    imageSrc: "/planperfect-3d-render.png", // placeholder until client imagery is added
-    logoSrc: "/logo-plan-perfect.png",
-    href: "https://www.planperfect.co/",
-  },
-];
+import Link from "next/link";
+import { PROJECTS } from "data/projects";
 
 export function ProductsSection() {
   return (
@@ -58,7 +28,7 @@ export function ProductsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8 justify-items-center">
-          {ITEMS.map((item) => (
+          {PROJECTS.map((item) => (
             <article
               key={item.name}
               className="group relative w-full max-w-xl bg-gradient-to-br from-neutral-900/90 to-neutral-900/40 border border-neutral-800/50 hover:border-neutral-700 rounded-2xl p-0 transition-all duration-300 overflow-hidden"
@@ -68,15 +38,12 @@ export function ProductsSection() {
                 className={`pointer-events-none absolute -top-20 -right-20 w-60 h-60 rounded-full blur-3xl opacity-[0.12] bg-gradient-to-br ${item.gradient}`}
               />
 
-              {/* Media */}
-              <a
-                href={item.href}
+              {/* Media — links to case study */}
+              <Link
+                href={`/case-study/${item.slug}`}
                 className="block"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900 grayscale-70 hover:grayscale-0 transition-all duration-300">
-                  {/* If we had real images, render them; otherwise gradient art */}
                   {item.imageSrc ? (
                     <Image
                       src={item.imageSrc}
@@ -95,7 +62,7 @@ export function ProductsSection() {
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
-              </a>
+              </Link>
 
               {/* Meta */}
               <div className="text-center p-4 backdrop-blur-lg">
@@ -123,6 +90,15 @@ export function ProductsSection() {
                 <p className="text-neutral-400 text-sm mt-1 font-geist">
                   {item.tagline}
                 </p>
+
+                {/* Case study link */}
+                <Link
+                  href={`/case-study/${item.slug}`}
+                  className="inline-flex items-center gap-1 mt-3 text-xs text-neutral-500 hover:text-neutral-300 transition-colors font-geist uppercase tracking-widest"
+                >
+                  View Case Study
+                  <ArrowUpRight className="w-3 h-3" />
+                </Link>
               </div>
             </article>
           ))}
