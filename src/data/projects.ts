@@ -40,6 +40,7 @@ export const PROJECTS: Project[] = [
         "React",
         "TypeScript",
         "OpenAI API",
+        "WhatsApp Business API",
         "PostgreSQL",
         "Tailwind CSS",
       ],
@@ -64,6 +65,27 @@ export const PROJECTS: Project[] = [
             "Different users have vastly different caloric needs based on age, weight, activity level, and personal goals (weight loss, muscle gain, maintenance). The system had to adapt recommendations dynamically without requiring a complex onboarding flow.",
           approach:
             "Built a progressive profiling system that gathers user data over the first few interactions instead of requiring a long sign-up form. Nutritional targets are recalculated on each profile update using Mifflin-St Jeor equations and activity multipliers, and the AI coach prompt is dynamically injected with the user's current goals so responses stay contextually relevant.",
+        },
+        {
+          title: "WhatsApp-First Architecture with User Context",
+          description:
+            "We wanted to make Calorichat accessible where users already spend their time — WhatsApp. This meant architecting a system where a specialized LLM could be reached through a simple chat message, while still maintaining full user context (meal history, goals, preferences) across conversations without a traditional app interface.",
+          approach:
+            "Built an integration layer on top of the WhatsApp Business API that receives incoming messages via webhooks, resolves the sender to an internal user profile, and assembles a context window with their recent meal logs, nutritional targets, and conversation history. This context is injected into the LLM system prompt on every request so the AI responds as a personalized coach — not a stateless chatbot. The architecture keeps the LLM specialized and lightweight while the context service handles all the user-state management separately.",
+        },
+        {
+          title: "Paywall in the WhatsApp Interface",
+          description:
+            "Monetizing a product that lives entirely inside WhatsApp is a unique challenge. There is no app store, no native payment UI, and no way to gate content behind a login screen. We needed a frictionless way to enforce subscription limits and collect payments without breaking the conversational flow.",
+          approach:
+            "Implemented a usage-based gating system: free-tier users get a set number of AI interactions per month, tracked server-side against their phone number. When a user hits the limit, the bot responds with a personalized message and a secure, short-lived payment link that opens a Stripe checkout page pre-filled with their account info. Once payment is confirmed via Stripe webhooks, the subscription is activated instantly and the bot resumes responding — the user never leaves the WhatsApp thread for more than a few seconds.",
+        },
+        {
+          title: "AI Tool Calls for Database Manipulation",
+          description:
+            "Users needed to create, edit, and delete meal records and profile data entirely through natural conversation. Telling the AI \"actually that was a small coffee, not a large\" or \"log a banana for yesterday's breakfast\" required the model to understand intent and translate it into precise database operations — without exposing raw CRUD endpoints to the user.",
+          approach:
+            "Leveraged the OpenAI function-calling (tool use) API to define a set of structured tools the LLM can invoke: create_meal_record, update_meal_record, delete_meal_record, and update_user_profile. Each tool has a strict JSON schema that the model must satisfy. When the model decides an action is needed, it emits a tool call with the structured parameters; the backend validates the payload, enforces ownership checks, executes the database operation, and returns the result to the model so it can confirm the change to the user in natural language. This keeps the AI in the driver's seat for UX while the backend retains full control over data integrity and authorization.",
         },
       ],
     },
