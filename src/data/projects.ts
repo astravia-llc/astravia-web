@@ -23,6 +23,66 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
+    slug: "grove",
+    name: "Grove",
+    tagline: "AI-Powered Relationship Intelligence Platform",
+    kind: "Product",
+    gradient: "from-emerald-500 to-teal-600",
+    href: "https://grove-connections.lovable.app/landing",
+    caseStudy: {
+      summary:
+        "Grove is a premium relationship memory platform that helps users capture context after conversations, structure contact intelligence, and reconnect more thoughtfully over time. It combines AI-assisted workflows, Telegram capture, Google integrations, and premium product UX into one cohesive SaaS experience.",
+      role: "Product Strategy & Full-Stack Development",
+      techStack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "OpenAI API",
+        "Telegram Bot API",
+        "Google Contacts API",
+        "PostgreSQL",
+        "Tailwind CSS",
+      ],
+      challenges: [
+        {
+          title: "Structured Relationship Memory from Unstructured Input",
+          description:
+            "Users send messy, conversational updates after meetings — voice notes, short texts, stream-of-consciousness — through Telegram or the web. The system needed to extract structured, meaningful contact intelligence (goals, life events, follow-up items, values) from this raw input without losing nuance or context.",
+          approach:
+            "Designed a multi-step AI extraction pipeline that processes raw input into structured fields with provenance tracking. Each extracted piece of information is presented to the user for review before being committed to the contact profile, ensuring the AI assists rather than automates. The system maintains a change log so users can see what was added, when, and from what source.",
+        },
+        {
+          title: "Reviewable AI Automation with Trust",
+          description:
+            "Blind AI automation erodes user trust, especially with personal relationship data. Users needed to feel in control of what the AI inferred and what ended up in their contact profiles. The challenge was making AI assistance feel helpful without feeling intrusive.",
+          approach:
+            "Built a confirmation-first workflow: AI-generated updates are staged as proposals with clear provenance, showing exactly which input produced each suggestion. Users approve, edit, or dismiss each change individually. This human-in-the-loop pattern keeps the AI useful while ensuring users remain the authority on their own relationships.",
+        },
+        {
+          title: "Multi-Surface Capture via Telegram and Web",
+          description:
+            "Users needed to log relationship context wherever they are — sometimes at their desk, sometimes walking out of a meeting. This required a seamless multi-surface capture system that worked identically across Telegram (text and voice) and the web interface.",
+          approach:
+            "Implemented a Telegram bot that accepts text messages and voice notes, transcribes audio, and routes everything through the same AI extraction pipeline as the web interface. Both surfaces write to the same contact timeline, ensuring a unified view regardless of capture method. The bot uses conversational prompts to gather context naturally rather than requiring structured commands.",
+        },
+        {
+          title: "Google Contacts Integration and Sync",
+          description:
+            "Users already have contact data in Google Contacts. Manually recreating that in Grove would be a non-starter for adoption. The system needed to import and sync with Google Contacts while layering Grove's richer relationship intelligence on top.",
+          approach:
+            "Built a Google OAuth flow with People API integration that imports contacts and maps Google's flat data model onto Grove's richer schema. A sync mechanism detects changes in either direction and presents conflicts for user resolution rather than silently overwriting. Grove treats Google Contacts as the baseline and adds its own relationship depth layer on top.",
+        },
+        {
+          title: "AI-Powered Conversation Prep",
+          description:
+            "Before reaching out to a contact, users wanted help remembering context and preparing thoughtful follow-ups. The system needed to synthesize a contact's full history into actionable preparation notes — without generating generic or hollow suggestions.",
+          approach:
+            "Created a manually triggered prep workflow that assembles the contact's timeline, recent notes, stated goals, and past conversation topics into a context-rich prompt. The AI generates specific recommendations, things to keep in mind, and a brief reference summary. Because it is trigger-based rather than automatic, users engage with it intentionally and the output stays relevant.",
+        },
+      ],
+    },
+  },
+  {
     slug: "calorichat",
     name: "Calorichat",
     tagline: "AI Calorie Tracker and Nutrition Coach",
