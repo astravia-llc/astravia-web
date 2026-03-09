@@ -28,6 +28,9 @@ export const PROJECTS: Project[] = [
     tagline: "AI-Powered Relationship Intelligence Platform",
     kind: "Product",
     gradient: "from-emerald-500 to-teal-600",
+    imageSrc: "/grove-3d-render-1.png",
+    logoSrc: "/logo-grove.png",
+
     href: "https://grove-connections.lovable.app/landing",
     caseStudy: {
       summary:
@@ -108,7 +111,7 @@ export const PROJECTS: Project[] = [
         {
           title: "Natural Language Meal Parsing",
           description:
-            "Users needed to log meals in plain language (e.g. \"a bowl of rice with grilled chicken and a side salad\") and get accurate calorie breakdowns. The AI had to handle ambiguous quantities, regional food names, and compound dishes without frustrating the user with follow-up questions.",
+            'Users needed to log meals in plain language (e.g. "a bowl of rice with grilled chicken and a side salad") and get accurate calorie breakdowns. The AI had to handle ambiguous quantities, regional food names, and compound dishes without frustrating the user with follow-up questions.',
           approach:
             "Designed a multi-pass parsing pipeline: the first pass extracts individual food items and inferred portions using an LLM prompt tuned with few-shot examples, and the second pass maps each item to a nutrition database for macronutrient values. A confidence score determines whether to auto-log or ask the user for clarification, keeping the interaction smooth for common cases.",
         },
@@ -143,7 +146,7 @@ export const PROJECTS: Project[] = [
         {
           title: "AI Tool Calls for Database Manipulation",
           description:
-            "Users needed to create, edit, and delete meal records and profile data entirely through natural conversation. Telling the AI \"actually that was a small coffee, not a large\" or \"log a banana for yesterday's breakfast\" required the model to understand intent and translate it into precise database operations — without exposing raw CRUD endpoints to the user.",
+            'Users needed to create, edit, and delete meal records and profile data entirely through natural conversation. Telling the AI "actually that was a small coffee, not a large" or "log a banana for yesterday\'s breakfast" required the model to understand intent and translate it into precise database operations — without exposing raw CRUD endpoints to the user.',
           approach:
             "Leveraged the OpenAI function-calling (tool use) API to define a set of structured tools the LLM can invoke: create_meal_record, update_meal_record, delete_meal_record, and update_user_profile. Each tool has a strict JSON schema that the model must satisfy. When the model decides an action is needed, it emits a tool call with the structured parameters; the backend validates the payload, enforces ownership checks, executes the database operation, and returns the result to the model so it can confirm the change to the user in natural language. This keeps the AI in the driver's seat for UX while the backend retains full control over data integrity and authorization.",
         },
@@ -190,7 +193,7 @@ export const PROJECTS: Project[] = [
           description:
             "The non-profit had volunteers across multiple time zones. Meetings created in one timezone needed to display correctly for everyone, and daylight saving transitions caused edge cases where events would shift by an hour.",
           approach:
-            "Stored all event times in UTC in the database and performed timezone conversion exclusively on the client side using the user's local timezone. For recurring events, the recurrence rule stores the original local time and timezone, and each instance is computed in that timezone before converting to UTC — ensuring that a \"9 AM every Monday\" meeting stays at 9 AM local time even across DST boundaries.",
+            'Stored all event times in UTC in the database and performed timezone conversion exclusively on the client side using the user\'s local timezone. For recurring events, the recurrence rule stores the original local time and timezone, and each instance is computed in that timezone before converting to UTC — ensuring that a "9 AM every Monday" meeting stays at 9 AM local time even across DST boundaries.',
         },
       ],
     },
