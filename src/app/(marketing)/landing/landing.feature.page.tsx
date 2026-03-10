@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Navigation, ProductsSection, Footer } from "./components";
+import { Navigation, ProductsSection, SpotlightSection, Footer } from "./components";
 import HeroHeader from "./components/hero-header";
 import StatsSection from "./components/stats-section";
 import CTASection from "./components/cta-section";
@@ -50,6 +50,7 @@ export function LandingFeaturePage() {
       <HeroHeader />
       <StatsSection />
       <ProductsSection />
+      <SpotlightSection />
       <CTASection />
       <OurServices />
       <Footer />

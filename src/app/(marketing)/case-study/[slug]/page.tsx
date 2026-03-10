@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { PROJECTS } from "data/projects";
 import { CaseStudyPage } from "./case-study.feature.page";
+import { GroveCaseStudyPage } from "./grove-case-study.feature.page";
 
 export const dynamic = "force-static";
 
@@ -31,5 +32,10 @@ export default async function Page({
   const { slug } = await params;
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) notFound();
+
+  if (slug === "grove") {
+    return <GroveCaseStudyPage project={project} />;
+  }
+
   return <CaseStudyPage project={project} />;
 }
