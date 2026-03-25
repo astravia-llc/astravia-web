@@ -27,7 +27,7 @@ export function ProductsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 justify-items-center">
           {PROJECTS.map((item) => (
             <article
               key={item.name}

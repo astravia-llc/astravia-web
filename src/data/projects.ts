@@ -86,6 +86,73 @@ export const PROJECTS: Project[] = [
     },
   },
   {
+    slug: "eternal-portraits",
+    name: "Eternal Portraits",
+    tagline: "AI-Generated Pet Portrait E-Commerce Platform",
+    kind: "Product",
+    gradient: "from-amber-500 to-rose-600",
+    href: "https://geteternalportraits.com",
+    caseStudy: {
+      summary:
+        "Eternal Portraits is a premium print-on-demand e-commerce platform that transforms pet photos into classical Renaissance-style oil painting portraits using AI generation. Built from idea to production in two weeks using an AI-powered development workflow with Lovable, Shopify, Gelato, and Supabase — it represents a new kind of project for Astravia: full-stack e-commerce with AI generation, print fulfillment, and operational automation.",
+      role: "Founder & Full-Stack Developer",
+      techStack: [
+        "Lovable (Gemini)",
+        "Shopify",
+        "Supabase",
+        "Replicate",
+        "Gelato API v4",
+        "Telegram Bot API",
+        "PostHog",
+        "Stripe",
+      ],
+      challenges: [
+        {
+          title: "Gelato Print Fulfillment — Custom API Over Native App",
+          description:
+            "Gelato's native Shopify app auto-imports orders but has no concept of a dynamically generated image. It sees 'Fine Art Print 8x10' with no artwork and creates blank orders. The Personalization Studio only accepts user-uploaded files within Shopify's product page, not externally generated image URLs.",
+          approach:
+            "Built a custom Gelato API v4 integration where the image URL travels as a cart attribute through Shopify checkout. After payment, a Supabase Edge Function reads the URL and calls Gelato directly. The native app was kept installed solely for its shipping rate profiles — uninstalling it removes the fulfillment location from products and breaks checkout entirely.",
+        },
+        {
+          title: "Shopify Webhook 5-Second Timeout",
+          description:
+            "Shopify webhooks have a strict 5-second response timeout, but the post-payment pipeline (AI upscaling + Gelato order creation) takes 30-120 seconds. Synchronous processing causes Shopify to retry, creating duplicate Gelato print orders.",
+          approach:
+            "Used Supabase EdgeRuntime.waitUntil() to respond 200 OK to Shopify immediately after HMAC verification, then run the entire pipeline as a non-blocking background promise. Zero additional infrastructure — no queues, no Redis. The Edge Function handles upscaling, asset storage, Gelato submission, and status updates as a background task within the 150s free-plan limit.",
+        },
+        {
+          title: "AI Upscaler Configuration for Fine Art Quality",
+          description:
+            "AI generates ~1024x1536px previews (~102 DPI). Gelato requires 300 DPI for fine art prints. Standard upscalers like Real-ESRGAN over-smooth the image — brushstrokes, craquelure, and aged-canvas texture get eliminated, making it look like clean digital art instead of an oil painting.",
+          approach:
+            "Selected philz1337x/clarity-upscaler on Replicate, which accepts a text prompt during upscaling. By prompting for craquelure, aged canvas, brushstrokes, old master painting texture, it preserves and enhances the painterly aesthetic. Set creativity to 0 and resemblance to 1 to prevent hallucinations that alter the pet's likeness. Moved upscaling to post-payment only — cost dropped from per-cart-add to per-confirmed-purchase (~$0.05/order).",
+        },
+        {
+          title: "Portrait Orientation from Variable Input",
+          description:
+            "AI generates portraits in the same orientation as the input photo. Landscape input produces landscape output, which requires aggressive center-cropping to 4:5 vertical — degrading composition and cutting off the pet's head or body.",
+          approach:
+            "Implemented a two-layer solution: client-side pre-crop using Canvas API and react-image-crop that detects landscape photos and presents an inline cropper for the user to adjust to 4:5 vertical before upload. A server-side post-generation crop is kept as a safety net. This eliminated composition issues without adding server latency.",
+        },
+        {
+          title: "Operational Monitoring via Telegram",
+          description:
+            "As a solo-founder product, operational alerts needed to be immediate, mobile-first, and actionable — not buried in an email inbox or requiring a dashboard login to respond to failures.",
+          approach:
+            "Built three Supabase Edge Functions: telegram-notify sends structured alerts on failures, telegram-callback handles inline keyboard button presses, and retry-order-upscale re-runs failed upscale + Gelato submission for a specific order. A failed order can be retried directly from the Telegram notification without opening any dashboard.",
+        },
+        {
+          title: "Pre-Launch Security Audit",
+          description:
+            "Lovable's security scanner caught three critical vulnerabilities before launch: an IDOR on signed URL generation (any order_id accepted without ownership check), a privilege escalation on admin_users (any authenticated user could self-promote), and enumerable download paths through a public bucket combined with readable generation request IDs.",
+          approach:
+            "Added email/order_id ownership verification before generating download URLs. Restricted admin_users INSERT to service role only. Prevented path enumeration by restricting generation_request_id visibility in public queries — the final-assets bucket stays public because Gelato needs direct download access, so the fix was at the database layer.",
+        },
+      ],
+    },
+  },
+  {
     slug: "calorichat",
     name: "Calorichat",
     tagline: "AI Calorie Tracker and Nutrition Coach",
