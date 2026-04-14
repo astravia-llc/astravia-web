@@ -1,6 +1,6 @@
 "use client";
 
-import { Send } from "lucide-react";
+import { Calendar } from "lucide-react";
 import Button from "../../../../components/ui/button";
 
 export function HeroHeader() {
@@ -17,29 +17,22 @@ export function HeroHeader() {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-400 to-orange-500"></span>
             <span className="text-neutral-400 font-geist font-normal">
-              Next-Generation Software Solutions
+              Fractional CTO & Technical Partner
             </span>
           </span>
 
           <h1
-            className="sm:text-5xl lg:text-7xl xl:text-8xl leading-[0.9] text-4xl font-light text-neutral-100 tracking-tight mb-8 font-playfair"
+            className="sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] text-4xl font-light text-neutral-100 tracking-tight mb-8 font-geist"
             style={{
               opacity: 0,
               animation:
                 "0.8s ease-out 0.6s 1 normal forwards running fadeSlideUp",
             }}
           >
-            Integrate AI with
-            <br className="hidden sm:block" />
-            <span
-              className="bg-clip-text font-light text-transparent tracking-tight bg-gradient-to-tr from-white via-white to-orange-700 inline-block"
-              style={{
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Astravia
+            Your product works.
+            <br />
+            <span className="text-neutral-400">
+              Your infrastructure doesn&apos;t.
             </span>
           </h1>
 
@@ -49,11 +42,11 @@ export function HeroHeader() {
               opacity: 0,
               animation:
                 "0.8s ease-out 0.8s 1 normal forwards running fadeSlideUp",
-              transition: "outline 0.1s ease-in-out",
             }}
           >
-            Seamlessly merging AI and enterprise. A next-generation architecture
-            engineered for clarity, adaptability, and exponential scale.
+            I help funded startups and product teams consolidate scattered
+            workflows into one AI-powered platform that actually scales.
+            Fractional CTO and technical partner through AstraVia LLC.
           </p>
 
           <div
@@ -63,16 +56,16 @@ export function HeroHeader() {
               animation: "fadeSlideUp 0.8s ease-out 1s forwards",
             }}
           >
-            <Button variant="outline" size="md" href="#products">
-              Watch Our Work
-            </Button>
             <Button
-              variant="neutral"
+              variant="gradient"
               size="md"
-              href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20your%20project"
-              rightIcon={<Send className="size-4" />}
+              href="https://calendly.com/acostajf/30min"
+              rightIcon={<Calendar className="size-4" />}
             >
-              Let&apos;s Talk
+              Book a Strategy Call
+            </Button>
+            <Button variant="outline" size="md" href="#products">
+              See My Work
             </Button>
           </div>
         </div>

@@ -5,16 +5,15 @@ export function StatsSection() {
       style={{
         opacity: 0,
         animation: "0.8s ease-out 1.2s 1 normal forwards running fadeSlideUp",
-        transition: "outline 0.1s ease-in-out",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "5+", label: "Years of Experience" },
-            { value: "4+", label: "Projects Delivered" },
-            { value: "100%", label: "Client Satisfaction" },
-            { value: "100%", label: "Adaptability" },
+            { value: "$2M+", label: "Product Value Delivered" },
+            { value: "3", label: "AI Platforms Built & Shipped" },
+            { value: "20hr/wk", label: "Deep Technical Partnership" },
+            { value: "Post-MVP", label: "to Scale-Ready" },
           ].map((item) => (
             <div className="text-center" key={item.label}>
               <div className="text-2xl md:text-3xl mb-2 font-light tracking-tight font-geist text-cyan-400">

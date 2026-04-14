@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import clsx from "clsx";
-import { Menu } from "lucide-react";
+import { Calendar, Menu } from "lucide-react";
+import Button from "../../../../components/ui/button";
 
 export function Navigation() {
   const handleNavClick = (
@@ -26,7 +27,6 @@ export function Navigation() {
       style={{
         opacity: 0,
         animation: "0.8s ease-out 0.2s 1 normal forwards running fadeSlideDown",
-        transition: "outline 0.1s ease-in-out",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,10 +50,12 @@ export function Navigation() {
               Astravia
             </span>
           </div>
+
           <div className="hidden md:flex items-center gap-8">
             {[
-              ["Products", "#products"],
-              // ["Solutions", "#"],
+              ["Work", "#products"],
+              ["Services", "#how-i-work"],
+              ["About", "#about"],
             ].map(([label, href]) => (
               <a
                 key={label as string}
@@ -64,7 +66,16 @@ export function Navigation() {
                 {label}
               </a>
             ))}
+            <Button
+              variant="gradient"
+              size="sm"
+              href="https://calendly.com/acostajf/30min"
+              rightIcon={<Calendar className="size-3.5" />}
+            >
+              Book a Call
+            </Button>
           </div>
+
           <button className="md:hidden">
             <Menu className="size-5" />
           </button>

@@ -20,7 +20,7 @@ export async function generateMetadata({
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.name} — Case Study | Astravia LLC`,
+    title: `${project.name} | Case Study — AstraVia LLC`,
     description: project.caseStudy.summary,
   };
 }

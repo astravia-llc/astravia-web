@@ -8,6 +8,8 @@ export type Project = {
   slug: string;
   name: string;
   tagline: string;
+  resultLine?: string;
+  ownershipNote?: string;
   kind: "Product" | "Client Project";
   gradient: string;
   imageSrc?: string;
@@ -26,6 +28,10 @@ export const PROJECTS: Project[] = [
     slug: "grove",
     name: "Grove",
     tagline: "AI-Powered Relationship Intelligence Platform",
+    resultLine:
+      "AI relationship platform from concept to production SaaS with Telegram integration, Google sync, and AI workflows",
+    ownershipNote:
+      "Designed, built, and shipped end-to-end as sole technical owner.",
     kind: "Product",
     gradient: "from-emerald-500 to-teal-600",
     imageSrc: "/grove-3d-render-1.png",
@@ -156,6 +162,10 @@ export const PROJECTS: Project[] = [
     slug: "calorichat",
     name: "Calorichat",
     tagline: "AI Calorie Tracker and Nutrition Coach",
+    resultLine:
+      "WhatsApp-native AI nutrition coach with Stripe monetization, serving real users",
+    ownershipNote:
+      "Designed, built, and shipped end-to-end as sole technical owner.",
     kind: "Product",
     gradient: "from-teal-500 to-orange-600",
     imageSrc: "/calorichat-3d-render.png",
@@ -224,6 +234,10 @@ export const PROJECTS: Project[] = [
     slug: "planperfect",
     name: "PlanPerfect",
     tagline: "Non‑profit Organization Plan Manager",
+    resultLine:
+      "Calendar platform handling 500+ events/month across multiple time zones for distributed teams",
+    ownershipNote:
+      "Led development as the sole engineer, working directly with the client's leadership team.",
     kind: "Client Project",
     gradient: "from-indigo-500 to-cyan-500",
     imageSrc: "/planperfect-3d-render.png",

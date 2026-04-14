@@ -15,15 +15,14 @@ export function ProductsSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <span className="backdrop-blur-lg  inline-flex items-center gap-2 uppercase tracking-widest text-xs font-medium mb-4 border-neutral-700 px-4 py-1.5 border rounded-full bg-gradient-to-tr from-teal-300/10 via-blue-400/10 to-orange-300/10 text-neutral-400 font-geist">
-            Products & Projects
+          <span className="backdrop-blur-lg inline-flex items-center gap-2 uppercase tracking-widest text-xs font-medium mb-4 border-neutral-700 px-4 py-1.5 border rounded-full bg-gradient-to-tr from-teal-300/10 via-blue-400/10 to-orange-300/10 text-neutral-400 font-geist">
+            Proof of Work
           </span>
           <h2 className="text-3xl md:text-4xl text-neutral-100 font-light tracking-tight font-geist">
             Recent Work
           </h2>
           <p className="text-neutral-400 mt-4 max-w-2xl mx-auto font-geist font-normal">
-            Focused, elegant, and scalable software. A glimpse of our recent
-            work.
+            Real platforms I&apos;ve architected, built, and shipped.
           </p>
         </div>
 
@@ -38,11 +37,8 @@ export function ProductsSection() {
                 className={`pointer-events-none absolute -top-20 -right-20 w-60 h-60 rounded-full blur-3xl opacity-[0.12] bg-gradient-to-br ${item.gradient}`}
               />
 
-              {/* Media — links to case study */}
-              <Link
-                href={`/case-study/${item.slug}`}
-                className="block"
-              >
+              {/* Media */}
+              <Link href={`/case-study/${item.slug}`} className="block">
                 <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900 grayscale-70 hover:grayscale-0 transition-all duration-300">
                   {item.imageSrc ? (
                     <Image
@@ -57,7 +53,6 @@ export function ProductsSection() {
                     />
                   )}
 
-                  {/* Hover overlay arrow */}
                   <div className="absolute right-3 top-3 z-10 inline-flex items-center justify-center w-8 h-8 rounded-full bg-neutral-900/60 border border-neutral-800 text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
@@ -90,6 +85,12 @@ export function ProductsSection() {
                 <p className="text-neutral-400 text-sm mt-1 font-geist">
                   {item.tagline}
                 </p>
+
+                {item.resultLine && (
+                  <p className="text-teal-400/80 text-xs mt-2 font-geist leading-relaxed">
+                    {item.resultLine}
+                  </p>
+                )}
 
                 {/* Case study link */}
                 <Link
