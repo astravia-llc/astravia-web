@@ -135,7 +135,7 @@ const DECISIONS: EngineeringDecision[] = [
       },
     ],
     chosen:
-      "Changed store country to United States. Astravia LLC is a registered US entity (Wyoming) \u2014 verified via SS-4 EIN letter and Mercury bank statement. No SSN required. 2.9% + $0.30 per transaction, Apple Pay and Google Pay auto-enabled.",
+      "Configured the store through a US-eligible business setup so Shopify Payments could be enabled for the target market. This reduced checkout friction by using a familiar payment flow and accelerated payment methods such as Apple Pay and Google Pay.",
   },
   {
     title: "Operational Monitoring \u2014 Telegram Over Email",
