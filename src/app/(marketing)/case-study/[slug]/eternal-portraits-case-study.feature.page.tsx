@@ -8,7 +8,7 @@ import Button from "components/ui/button";
 const TECH_STACK = [
   { layer: "Frontend + AI generation", tech: "Lovable (Gemini-based)", notes: "Full-stack AI IDE, React/TypeScript" },
   { layer: "Commerce", tech: "Shopify Basic", notes: "Store, checkout, order management" },
-  { layer: "Payments", tech: "Shopify Payments (Stripe)", notes: "Connected to Mercury bank (Astravia LLC)" },
+  { layer: "Payments", tech: "Shopify Payments (Stripe)", notes: "Integrated payment processing" },
   { layer: "Backend", tech: "Supabase", notes: "Edge Functions (Deno), Postgres, Storage" },
   { layer: "Print fulfillment", tech: "Gelato API v4", notes: "Custom webhook integration" },
   { layer: "Image upscaling", tech: "Replicate — clarity-upscaler", notes: "Post-payment only" },
