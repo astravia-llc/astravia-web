@@ -1,6 +1,5 @@
-import { Github, Linkedin } from "lucide-react";
+import { Calendar, Github, Linkedin } from "lucide-react";
 import Button from "../../../../components/ui/button";
-import { Calendar } from "lucide-react";
 
 export function AboutSection() {
   return (
