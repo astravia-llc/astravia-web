@@ -1,10 +1,20 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { Menu } from "lucide-react";
+import { Calendar, Menu, X } from "lucide-react";
+import Button from "../../../../components/ui/button";
+
+const NAV_LINKS = [
+  ["Work", "#products"],
+  ["Services", "#how-i-work"],
+  ["About", "#about"],
+] as const;
 
 export function Navigation() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const handleNavClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     href: string
@@ -17,6 +27,7 @@ export function Navigation() {
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.replaceState(null, "", href);
       }
+      setMobileOpen(false);
     }
   };
 
@@ -26,7 +37,6 @@ export function Navigation() {
       style={{
         opacity: 0,
         animation: "0.8s ease-out 0.2s 1 normal forwards running fadeSlideDown",
-        transition: "outline 0.1s ease-in-out",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,26 +60,68 @@ export function Navigation() {
               Astravia
             </span>
           </div>
+
+          {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            {[
-              ["Products", "#products"],
-              // ["Solutions", "#"],
-            ].map(([label, href]) => (
+            {NAV_LINKS.map(([label, href]) => (
               <a
-                key={label as string}
-                href={href as string}
-                onClick={(e) => handleNavClick(e, href as string)}
+                key={label}
+                href={href}
+                onClick={(e) => handleNavClick(e, href)}
                 className="text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal"
               >
                 {label}
               </a>
             ))}
+            <Button
+              variant="gradient"
+              size="sm"
+              href="https://calendly.com/acostajf/30min"
+              rightIcon={<Calendar className="size-3.5" />}
+            >
+              Book a Call
+            </Button>
           </div>
-          <button className="md:hidden">
-            <Menu className="size-5" />
+
+          {/* Mobile toggle */}
+          <button
+            type="button"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            className="md:hidden text-neutral-300"
+            onClick={() => setMobileOpen((prev) => !prev)}
+          >
+            {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-neutral-800/50 bg-neutral-950/95 backdrop-blur-xl">
+          <div className="px-4 py-4 space-y-3">
+            {NAV_LINKS.map(([label, href]) => (
+              <a
+                key={label}
+                href={href}
+                onClick={(e) => handleNavClick(e, href)}
+                className="block text-sm text-neutral-400 hover:text-neutral-200 transition-colors font-geist font-normal py-2"
+              >
+                {label}
+              </a>
+            ))}
+            <div className="pt-2">
+              <Button
+                variant="gradient"
+                size="sm"
+                href="https://calendly.com/acostajf/30min"
+                rightIcon={<Calendar className="size-3.5" />}
+              >
+                Book a Call
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

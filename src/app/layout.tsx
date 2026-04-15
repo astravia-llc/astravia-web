@@ -13,57 +13,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Astravia LLC | Intelligent SaaS for Customer-Centric Growth",
+  metadataBase: new URL("https://www.astraviallc.com"),
+  title: "AstraVia LLC — Fractional CTO & AI Technical Partner for Startups",
   description:
-    "Astravia LLC builds AI-driven SaaS products designed to empower businesses with advanced customer intelligence. Our first product, CaloriChat, helps users track nutrition effortlessly while showcasing the future of data-driven wellness tools.",
+    "I help funded startups consolidate scattered workflows into scalable AI-powered platforms. Fractional CTO retainers, project-based builds, and AI architecture audits.",
   keywords: [
-    "Astravia LLC",
-    "CaloriChat",
-    "AI SaaS",
-    "Customer Intelligence",
-    "Business Analytics",
-    "Nutrition AI",
-    "Customer Growth Tools",
-    "Startup SaaS",
-    "AI for Business",
-    "Software Development",
+    "Fractional CTO",
+    "Technical Partner",
     "AI Integration",
-    "Consulting",
-    "Support",
-    "Software Agency",
-    "Custom Software Development",
-    "Legacy Software Development",
-    "AI Integration",
+    "Startup CTO",
+    "Technical Architecture",
     "AI Consulting",
-    "AI Support",
-    "AI Training",
-    "AI Custom Software",
-    "AI Legacy Software",
+    "AstraVia LLC",
+    "Next.js",
+    "Full-Stack Development",
+    "Product Engineering",
   ],
   openGraph: {
-    title: "Astravia LLC — Advanced SaaS for Intelligent Customer Growth",
+    title: "AstraVia LLC — Fractional CTO & AI Technical Partner",
     description:
-      "Astravia builds AI-first SaaS products that empower businesses and individuals to grow smarter. Starting with CaloriChat, our intelligent calorie tracking and customer engagement tool.",
-    url: "https://www.astraviallc.com", // cámbialo cuando tengas dominio final
-    siteName: "Astravia LLC",
+      "I help funded startups consolidate scattered workflows into scalable AI-powered platforms. Fractional CTO retainers, project-based builds, and AI architecture audits.",
+    url: "https://www.astraviallc.com",
+    siteName: "AstraVia LLC",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/api/og", // llama a la ruta que genera la imagen
+        url: "/api/og",
         width: 1200,
         height: 630,
-        alt: "Astravia LLC - Intelligent SaaS for Customer-Centric Growth",
+        alt: "AstraVia LLC — Fractional CTO & AI Technical Partner for Startups",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Astravia LLC | AI-Powered SaaS for Customer-Centric Growth",
+    title: "AstraVia LLC — Fractional CTO & AI Technical Partner",
     description:
-      "Astravia builds AI-first SaaS products that empower businesses and individuals to grow smarter. Starting with CaloriChat, our intelligent calorie tracking and customer engagement tool.",
-    creator: "@astravia",
-    images: ["https://www.astraviallc.com/og-image.png"],
+      "I help funded startups consolidate scattered workflows into scalable AI-powered platforms. Fractional CTO retainers, project-based builds, and AI architecture audits.",
+    images: ["/api/og"],
   },
 };
 
@@ -74,80 +62,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        {/* Google Fonts */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
-        />
-      </head>
       <body
-        className="bg-neutral-950 text-neutral-200 antialiased overflow-x-hidden"
-        style={{ fontFamily: "'Inter', sans-serif" }}
+        className={`${geistSans.variable} ${geistMono.variable} bg-neutral-950 text-neutral-200 antialiased overflow-x-hidden font-geist`}
       >
         {children}
       </body>

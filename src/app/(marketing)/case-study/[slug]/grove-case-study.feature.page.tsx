@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Calendar } from "lucide-react";
 import type { Project } from "data/projects";
 import Button from "components/ui/button";
 
@@ -113,19 +113,20 @@ export function GroveCaseStudyPage({ project }: { project: Project }) {
           </p>
 
           <p className="text-sm text-neutral-500 mt-4 font-geist font-normal leading-relaxed max-w-3xl">
-            Grove demonstrates Astravia&apos;s ability to build AI-native,
-            integration-heavy products with strong UX, structured data
-            architecture, and reviewable automation.
+            Designed, built, and shipped end-to-end as sole technical owner.
+            Grove demonstrates my approach to AI-native, integration-heavy
+            products with strong UX, structured data architecture, and
+            reviewable automation.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-4 mt-10">
             <Button
               variant="gradient"
               size="md"
-              leftIcon={<Mail className="w-4 h-4" />}
-              href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20a%20project"
+              rightIcon={<Calendar className="w-4 h-4" />}
+              href="https://calendly.com/acostajf/30min"
             >
-              Talk to Astravia
+              Book a Strategy Call
             </Button>
             {project.href && (
               <Button
@@ -242,7 +243,7 @@ export function GroveCaseStudyPage({ project }: { project: Project }) {
             Why this matters for prospects
           </h2>
           <p className="text-neutral-400 leading-relaxed font-geist font-normal mb-4">
-            Grove shows Astravia can design and build software that combines:
+            Grove shows how I design and build software that combines:
           </p>
           <ul className="space-y-2 text-neutral-400 font-geist font-normal">
             {[
@@ -260,9 +261,9 @@ export function GroveCaseStudyPage({ project }: { project: Project }) {
             ))}
           </ul>
           <p className="text-neutral-400 leading-relaxed font-geist font-normal mt-6">
-            This project is a strong example of Astravia&apos;s ability to build
-            more than simple dashboards or CRUD apps. It demonstrates product
-            thinking, architecture, and UX maturity in one cohesive system.
+            This project is a strong example of what I deliver: more than simple
+            dashboards or CRUD apps. It demonstrates product thinking,
+            architecture, and UX maturity in one cohesive system.
           </p>
         </section>
 
@@ -280,7 +281,7 @@ export function GroveCaseStudyPage({ project }: { project: Project }) {
           }}
         >
           <h2 className="text-2xl md:text-3xl text-neutral-100 font-light tracking-tight font-geist mb-8">
-            What Astravia delivered
+            What I delivered
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
             {DELIVERABLES.map((item) => (
@@ -336,17 +337,17 @@ export function GroveCaseStudyPage({ project }: { project: Project }) {
             Need software that feels as thoughtful as it is functional?
           </h2>
           <p className="text-neutral-400 font-geist font-normal max-w-2xl mx-auto mb-8">
-            Astravia builds AI-native products, integration-heavy workflows, and
-            premium software experiences designed around real user behavior.
+            I build AI-native products, integration-heavy workflows, and premium
+            software experiences designed around real user behavior.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Button
               variant="gradient"
               size="md"
-              leftIcon={<Mail className="w-4 h-4" />}
-              href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20a%20project"
+              rightIcon={<Calendar className="w-4 h-4" />}
+              href="https://calendly.com/acostajf/30min"
             >
-              Talk to Astravia
+              Book a Strategy Call
             </Button>
             <Link
               href="/#products"

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Calendar } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,7 +11,6 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Left side - Logo and Navigation */}
           <div className="flex items-center gap-8">
-            {/* Logo */}
             <div className="flex items-center gap-3">
               <Image
                 src="/astravia-logo.png"
@@ -21,7 +21,6 @@ export function Footer() {
               />
             </div>
 
-            {/* Navigation Links */}
             <nav className="flex items-center gap-6 text-neutral-400">
               <Link
                 href="/"
@@ -33,26 +32,46 @@ export function Footer() {
                 href="/#products"
                 className="text-sm font-medium transition-colors hover:text-neutral-100"
               >
-                Products
+                Work
+              </Link>
+              <Link
+                href="/#how-i-work"
+                className="text-sm font-medium transition-colors hover:text-neutral-100"
+              >
+                Services
+              </Link>
+              <Link
+                href="/#about"
+                className="text-sm font-medium transition-colors hover:text-neutral-100"
+              >
+                About
               </Link>
             </nav>
           </div>
 
-          {/* Right side - Contact Email */}
-          <div className="flex items-center gap-3">
+          {/* Right side - Contact */}
+          <div className="flex items-center gap-4">
             <a
-              href="mailto:jfacostamu@gmail.com"
+              href="mailto:jhon@astraviallc.com"
               className="text-sm text-cyan-400 font-medium transition-colors hover:text-cyan-300"
             >
-              jfacostamu@gmail.com
+              jhon@astraviallc.com
+            </a>
+            <a
+              href="https://calendly.com/acostajf/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-neutral-400 font-medium transition-colors hover:text-neutral-200"
+            >
+              <Calendar className="size-3.5" />
+              Book a Call
             </a>
           </div>
         </div>
 
-        {/* Bottom line - Copyright */}
         <div className="mt-6">
           <p className="text-sm text-neutral-500 text-center lg:text-left">
-            © 2025, Astravia LLC.
+            &copy; {new Date().getFullYear()}, AstraVia LLC.
           </p>
         </div>
       </div>

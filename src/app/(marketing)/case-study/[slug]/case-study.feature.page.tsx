@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Calendar } from "lucide-react";
 import type { Project } from "data/projects";
+import Button from "components/ui/button";
 
 export function CaseStudyPage({ project }: { project: Project }) {
   const { caseStudy } = project;
@@ -80,6 +81,12 @@ export function CaseStudyPage({ project }: { project: Project }) {
             {project.tagline}
           </p>
 
+          {project.resultLine && (
+            <p className="text-sm text-teal-400/80 mt-3 font-geist leading-relaxed">
+              {project.resultLine}
+            </p>
+          )}
+
           {/* Hero image */}
           {project.imageSrc && (
             <div className="relative mt-10 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-neutral-800/50 bg-neutral-900">
@@ -125,6 +132,11 @@ export function CaseStudyPage({ project }: { project: Project }) {
                 <p className="text-neutral-300 font-geist text-sm">
                   {caseStudy.role}
                 </p>
+                {project.ownershipNote && (
+                  <p className="text-neutral-500 font-geist text-xs mt-2 italic">
+                    {project.ownershipNote}
+                  </p>
+                )}
               </div>
               <div>
                 <h3 className="text-sm uppercase tracking-widest text-neutral-500 font-geist mb-3">
@@ -224,6 +236,14 @@ export function CaseStudyPage({ project }: { project: Project }) {
           }}
         >
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+            <Button
+              variant="gradient"
+              size="md"
+              href="https://calendly.com/acostajf/30min"
+              rightIcon={<Calendar className="w-4 h-4" />}
+            >
+              Book a Strategy Call
+            </Button>
             <Link
               href="/#products"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-neutral-700 hover:border-neutral-600 hover:bg-neutral-900/50 text-sm text-neutral-200 transition-all duration-300 font-geist"
@@ -231,17 +251,6 @@ export function CaseStudyPage({ project }: { project: Project }) {
               <ArrowLeft className="w-4 h-4" />
               View All Projects
             </Link>
-            {project.href && (
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white bg-gradient-to-r from-teal-500/20 to-orange-600/20 hover:from-teal-500/50 hover:to-orange-700/50 border border-neutral-700 hover:border-neutral-500 text-sm transition-all duration-300 font-geist"
-              >
-                Visit {project.name}
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-            )}
           </div>
         </section>
       </main>

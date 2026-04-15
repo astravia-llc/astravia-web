@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { PROJECTS } from "data/projects";
 import { CaseStudyPage } from "./case-study.feature.page";
 import { GroveCaseStudyPage } from "./grove-case-study.feature.page";
+import { EternalPortraitsCaseStudyPage } from "./eternal-portraits-case-study.feature.page";
 
 export const dynamic = "force-static";
 
@@ -19,7 +20,7 @@ export async function generateMetadata({
   const project = PROJECTS.find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.name} — Case Study | Astravia LLC`,
+    title: `${project.name} | Case Study — AstraVia LLC`,
     description: project.caseStudy.summary,
   };
 }
@@ -35,6 +36,10 @@ export default async function Page({
 
   if (slug === "grove") {
     return <GroveCaseStudyPage project={project} />;
+  }
+
+  if (slug === "eternal-portraits") {
+    return <EternalPortraitsCaseStudyPage project={project} />;
   }
 
   return <CaseStudyPage project={project} />;
