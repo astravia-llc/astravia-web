@@ -39,19 +39,23 @@ export function ProductsSection() {
 
               {/* Media */}
               <Link href={`/case-study/${item.slug}`} className="block">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border border-neutral-800/50 bg-neutral-900 grayscale-70 hover:grayscale-0 transition-all duration-300">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-xl border-b border-neutral-800/50 bg-neutral-900 grayscale-70 hover:grayscale-0 transition-all duration-300">
                   {item.imageSrc ? (
                     <Image
                       src={item.imageSrc}
                       alt={`${item.name} preview`}
                       fill
-                      className="object-contain md:object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                     />
                   ) : (
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-20`}
                     />
                   )}
+
+                  {/* Edge vignette for smooth blend into card */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-transparent to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-neutral-900/30 via-transparent to-neutral-900/30" />
 
                   <div className="absolute right-3 top-3 z-10 inline-flex items-center justify-center w-8 h-8 rounded-full bg-neutral-900/60 border border-neutral-800 text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity">
                     <ArrowUpRight className="w-4 h-4" />
