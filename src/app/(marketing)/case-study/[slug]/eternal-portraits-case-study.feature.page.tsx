@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Mail } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Calendar } from "lucide-react";
 import type { Project } from "data/projects";
 import Button from "components/ui/button";
 
@@ -259,8 +259,8 @@ export function EternalPortraitsCaseStudyPage({
             primary IDE, Shopify for commerce, Gelato for fulfillment, and
             Supabase for backend orchestration. ChatGPT and Claude served as
             strategic partners throughout development. This project represents a
-            new capability for Astravia: full-stack e-commerce with AI
-            generation, print-on-demand integration, and operational automation.
+            new capability: full-stack e-commerce with AI generation,
+            print-on-demand integration, and operational automation.
           </p>
 
           <div className="flex flex-wrap gap-3 mt-6">
@@ -282,10 +282,10 @@ export function EternalPortraitsCaseStudyPage({
             <Button
               variant="gradient"
               size="md"
-              leftIcon={<Mail className="w-4 h-4" />}
-              href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20a%20project"
+              rightIcon={<Calendar className="w-4 h-4" />}
+              href="https://calendly.com/acostajf/30min"
             >
-              Talk to Astravia
+              Book a Strategy Call
             </Button>
             {project.href && (
               <Button
@@ -581,9 +581,9 @@ export function EternalPortraitsCaseStudyPage({
             Why this project matters
           </h2>
           <p className="text-neutral-400 leading-relaxed font-geist font-normal mb-4">
-            Eternal Portraits demonstrates a new capability for Astravia:
-            shipping a complete, revenue-ready product from idea to production in
-            two weeks using an AI-powered development workflow. It combines:
+            Eternal Portraits demonstrates what I can ship: a complete,
+            revenue-ready product from idea to production in two weeks using an
+            AI-powered development workflow. It combines:
           </p>
           <ul className="space-y-2 text-neutral-400 font-geist font-normal">
             {[
@@ -615,18 +615,17 @@ export function EternalPortraitsCaseStudyPage({
             Need a product built fast without cutting corners?
           </h2>
           <p className="text-neutral-400 font-geist font-normal max-w-2xl mx-auto mb-8">
-            Astravia builds production-ready products using AI-native workflows,
-            real integrations, and disciplined engineering \u2014 from idea to
-            launch.
+            I build production-ready products using AI-native workflows, real
+            integrations, and disciplined engineering.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <Button
               variant="gradient"
               size="md"
-              leftIcon={<Mail className="w-4 h-4" />}
-              href="mailto:jfacostamu@gmail.com?subject=Let's%20talk%20about%20a%20project"
+              rightIcon={<Calendar className="w-4 h-4" />}
+              href="https://calendly.com/acostajf/30min"
             >
-              Talk to Astravia
+              Book a Strategy Call
             </Button>
             <Link
               href="/#products"

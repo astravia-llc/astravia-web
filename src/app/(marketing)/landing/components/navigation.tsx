@@ -76,7 +76,7 @@ export function Navigation() {
             </Button>
           </div>
 
-          <button className="md:hidden">
+          <button type="button" aria-label="Open menu" className="md:hidden">
             <Menu className="size-5" />
           </button>
         </div>

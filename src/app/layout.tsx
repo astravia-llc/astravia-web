@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.astraviallc.com"),
   title: "AstraVia LLC — Fractional CTO & AI Technical Partner for Startups",
   description:
     "I help funded startups consolidate scattered workflows into scalable AI-powered platforms. Fractional CTO retainers, project-based builds, and AI architecture audits.",
@@ -62,8 +63,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-neutral-950 text-neutral-200 antialiased overflow-x-hidden`}
-        style={{ fontFamily: "'Inter', sans-serif" }}
+        className={`${geistSans.variable} ${geistMono.variable} bg-neutral-950 text-neutral-200 antialiased overflow-x-hidden font-geist`}
       >
         {children}
       </body>

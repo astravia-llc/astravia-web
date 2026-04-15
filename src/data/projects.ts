@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     href: "https://geteternalportraits.com",
     caseStudy: {
       summary:
-        "Eternal Portraits is a premium print-on-demand e-commerce platform that transforms pet photos into classical Renaissance-style oil painting portraits using AI generation. Built from idea to production in two weeks using an AI-powered development workflow with Lovable, Shopify, Gelato, and Supabase — it represents a new kind of project for Astravia: full-stack e-commerce with AI generation, print fulfillment, and operational automation.",
+        "Eternal Portraits is a premium print-on-demand e-commerce platform that transforms pet photos into classical Renaissance-style oil painting portraits using AI generation. I built it from idea to production in two weeks using an AI-powered development workflow with Lovable, Shopify, Gelato, and Supabase. Full-stack e-commerce with AI generation, print fulfillment, and operational automation.",
       role: "Founder & Full-Stack Developer",
       techStack: [
         "Lovable (Gemini)",
